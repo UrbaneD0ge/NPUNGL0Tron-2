@@ -1,11 +1,19 @@
 body {
   background-color: teal;
-  color: rgb(255, 230, 0);
   font-family: Arial, Helvetica, sans-serif;
   font-size: x-large;
   ;
 }
 
 header {
+  color: rgb(255, 230, 0);
   text-align: center;
+}
+
+.calendar {
+  font-size: larger;
+  background-color: whitesmoke;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 20px;
 }
