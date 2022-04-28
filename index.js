@@ -1,5 +1,5 @@
-const P = document.getElementById("P");
+const A = document.getElementById("A");
 
-P.addEventListener("click", function onclick() {
-  P.className = 'btn-warning'
-}
+A.addEventListener("click", function onclick() {
+  A.className = 'btn btn-block btn-warning'
+});
