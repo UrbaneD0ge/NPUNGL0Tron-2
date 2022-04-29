@@ -1,5 +1,5 @@
-const A = document.getElementById("A");
-
-A.addEventListener("click", function onclick() {
-  A.className = 'btn btn-block btn-warning'
+document.querySelectorAll('.btn').forEach(item => {
+  item.addEventListener('click', event => { item.className = 'btn btn-block btn-warning'})
 });
+
+
