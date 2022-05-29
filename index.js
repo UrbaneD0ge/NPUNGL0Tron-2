@@ -1,12 +1,12 @@
 document.querySelectorAll('.btn').forEach(item => { item.addEventListener('click', chgColor)
 });
 
-colors = ['btn btn-block btn-warning', 'btn btn-block btn-success', 'btn btn-block btn-primary']
+colors = ['btn btn-block btn-warning', 'btn btn-block btn-success', 'btn btn-block btn-dark', 'btn btn-block btn-primary']
 
 function chgColor () {
-  color = colors.shift();
+  let color = colors.shift();
   colors.push(color);
-  document.querySelectorAll('btn').className = color.value;
+  this.className = color;
   console.log(color)
 };
 
