@@ -7,10 +7,18 @@ function chgColor () {
   let color = colors.shift();
   colors.push(color);
   this.className = color;
-  console.log(color)
 };
 
 // use Temporal js or Moment.js to get current month, month.length, weekday of 1st day
+
+const today = $("#currentDay");
+
+function displayTime() {
+  var rightNow = moment().format("MMM Do, YYYY h:mm:ss a");
+  today.text(rightNow);
+}
+
+setInterval(displayTime, 1000);
 
 // NPU dates are essentially calendar columns, since they do not deviate from their weekdays. Must handle rescheduling, cancellation.
 
