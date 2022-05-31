@@ -14,7 +14,7 @@ function chgColor () {
 const today = $("#currentDay");
 
 function displayTime() {
-  var rightNow = moment().format("MMM Do, YYYY h:mm:ss a");
+  var rightNow = moment().format("LLLL");
   today.text(rightNow);
 }
 
