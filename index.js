@@ -9,8 +9,6 @@ function chgColor () {
   this.className = color;
 };
 
-// use Temporal js or Moment.js to get current month, month.length, weekday of 1st day
-
 const today = $("#currentDay");
 
 function displayTime() {
@@ -20,11 +18,30 @@ function displayTime() {
 
 setInterval(displayTime, 1000);
 
-const month = new moment().format("MMM");
-console.log(month);
+// use Temporal js or Moment.js to get current month, month.length, weekday of 1st day
 
 const wkdays = new moment.weekdays();
 console.log(wkdays);
+
+const month = new moment().format("MMMM");
+const year = new moment().format("YYYY");
+console.log(month);
+console.log(year)
+
+function getThirdFriday(year, month){
+  // Convert date to moment (month 0-11)
+  var myMonth = moment({ year: year, month: month });
+
+  // Get first Friday of the first week of the month
+  var firstFriday = myMonth.weekday(4);
+  var nWeeks = 2;
+  // Check if first Friday is in the given month
+  if( firstFriday.month() != month ){
+      nWeeks++;
+  }
+  // Return 3rd Friday of the month formatted (custom format)
+  return firstFriday.add(nWeeks, 'weeks').format("DD MMMM YYYY");
+}
 
 // NPU dates are essentially calendar columns, since they do not deviate from their weekdays. Must handle rescheduling, cancellation.
 
