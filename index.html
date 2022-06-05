@@ -23,13 +23,11 @@
     </header>
 
     <div class='container'>
-      <form target='_self'>
+      <form onsubmit="return false">
         <div class="form-group">
           <label for="name">NPU Designation?</label>
           <select class="form-control" id="NPU" list="NPUs">
-
-          <datalist id="NPUs">
-            <!-- <option value="APAB">APAB</option> -->
+            <option value="APAB">APAB</option>
             <option value="A">A</option>
             <option value="B">B</option>
             <option value="C">C</option>
@@ -54,15 +52,13 @@
             <option value="V">V</option>
             <option value="W">W</option>
             <option value="X">X</option>
-            <option value="Y">Y</option>s
+            <option value="Y">Y</option>
             <option value="Z">Z</option>
-        </div>
-        <br></br>
-        <div class="form-group">
-          <label for="date">Date</label>
+          </select>
+          <label for="date">Date:</label>
           <input type="date" class="form-control" id="date" name="date">
-        </div>
-        <div class="form-group">
+        <!-- </div>
+        <div class="form-group"> -->
           <legend>Document type?</legend>
           <input type="checkbox" name="Draft_to_Chair" value="draft" id="draft">
           <label for="draft">Draft to Chair</label>
@@ -85,9 +81,14 @@
           <label for="nextdoor">Nextdoor Post</label><br>
 
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button id="submit" class="btn btn-primary">Submit</button>
       </form>
       <br>
+    </div>
+
+    <div>
+
+
     </div>
 
     <!-- gCal iFrame -->
@@ -99,43 +100,43 @@
       <!-- Pungle Button Grid -->
       <div class='calendar col-11'>Button grid
         <div class='row'>
-           <div class='col'><button id='P' class='btn btn-block btn-primary'>P</button></div>
-           <div class='col'><button id='A' class='btn btn-block btn-primary'>A</button></div>
-           <div class='col'><button id='B' class='btn btn-block btn-primary'>B</button></div>
-           <div class='col'><button id='C' class='btn btn-block btn-primary'>C</button></div>
-           <div class='col'><button id='E' class='btn btn-block btn-primary'>E</button></div>
+           <div class='col'><button id='P' class='pngl btn btn-block btn-primary'>P</button></div>
+           <div class='col'><button id='A' class='pngl btn btn-block btn-primary'>A</button></div>
+           <div class='col'><button id='B' class='pngl btn btn-block btn-primary'>B</button></div>
+           <div class='col'><button id='C' class='pngl btn btn-block btn-primary'>C</button></div>
+           <div class='col'><button id='E' class='pngl btn btn-block btn-primary'>E</button></div>
         </div>
         <br>
         <div class='row'>
-           <div class='col'><button id='R' class='btn btn-block btn-primary'>R</button></div>
-           <div class='col'><button id='H' class='btn btn-block btn-primary'>H</button></div>
-           <div class='col'><button id='V' class='btn btn-block btn-primary'>V</button></div>
-           <div class='col'><button id='X' class='btn btn-block btn-primary'>X</button></div>
-           <div class='col'><button id='L' class='btn btn-block btn-primary'>L</button></div>
+           <div class='col'><button id='R' class='pngl btn btn-block btn-primary'>R</button></div>
+           <div class='col'><button id='H' class='pngl btn btn-block btn-primary'>H</button></div>
+           <div class='col'><button id='V' class='pngl btn btn-block btn-primary'>V</button></div>
+           <div class='col'><button id='X' class='pngl btn btn-block btn-primary'>X</button></div>
+           <div class='col'><button id='L' class='pngl btn btn-block btn-primary'>L</button></div>
         </div>
         <br>
         <div class='row'>
-           <div class='col'><button id='T' class='btn btn-block btn-primary'>T</button></div>
-           <div class='col'><button id='F' class='btn btn-block btn-primary'>F</button></div>
-           <div class='col'><button id='Y' class='btn btn-block btn-primary'>Y</button></div>
-           <div class='col'><button id='K' class='btn btn-block btn-primary'>K</button></div>
-           <div class='col'><button id='I' class='btn btn-block btn-primary'>I</button></div>
+           <div class='col'><button id='T' class='pngl btn btn-block btn-primary'>T</button></div>
+           <div class='col'><button id='F' class='pngl btn btn-block btn-primary'>F</button></div>
+           <div class='col'><button id='Y' class='pngl btn btn-block btn-primary'>Y</button></div>
+           <div class='col'><button id='K' class='pngl btn btn-block btn-primary'>K</button></div>
+           <div class='col'><button id='I' class='pngl btn btn-block btn-primary'>I</button></div>
         </div>
         <br>
         <div class='row'>
-           <div class='col'><button id='G' class='btn btn-block btn-primary'>G</button></div>
-           <div class='col'><button id='Q' class='btn btn-block btn-primary'>Q</button></div>
-           <div class='col'><button id='S' class='btn btn-block btn-primary'>S</button></div>
-           <div class='col'><button id='M' class='btn btn-block btn-primary'>M</button></div>
-           <div class='col'><button id='Z' class='btn btn-block btn-primary'>Z</button></div>
+           <div class='col'><button id='G' class='pngl btn btn-block btn-primary'>G</button></div>
+           <div class='col'><button id='Q' class='pngl btn btn-block btn-primary'>Q</button></div>
+           <div class='col'><button id='S' class='pngl btn btn-block btn-primary'>S</button></div>
+           <div class='col'><button id='M' class='pngl btn btn-block btn-primary'>M</button></div>
+           <div class='col'><button id='Z' class='pngl btn btn-block btn-primary'>Z</button></div>
         </div>
         <br>
         <div class='row'>
-           <div class='col'><button id='D' class='btn btn-block btn-primary'>D</button></div>
-           <div class='col'><button id='J' class='btn btn-block btn-primary'>J</button></div>
-           <div class='col'><button id='O' class='btn btn-block btn-primary'>O</button></div>
-           <div class='col'><button id='W' class='btn btn-block btn-primary'>W</button></div>
-           <div class='col'><button id='N' class='btn btn-block btn-primary'>N</button></div>
+           <div class='col'><button id='D' class='pngl btn btn-block btn-primary'>D</button></div>
+           <div class='col'><button id='J' class='pngl btn btn-block btn-primary'>J</button></div>
+           <div class='col'><button id='O' class='pngl btn btn-block btn-primary'>O</button></div>
+           <div class='col'><button id='W' class='pngl btn btn-block btn-primary'>W</button></div>
+           <div class='col'><button id='N' class='pngl btn btn-block btn-primary'>N</button></div>
         </div>
       </div>
     </div>

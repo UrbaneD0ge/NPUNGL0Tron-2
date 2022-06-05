@@ -1,4 +1,4 @@
-document.querySelectorAll('.btn').forEach(item => { item.addEventListener('click', chgColor)
+document.querySelectorAll('.pngl').forEach(item => { item.addEventListener('click', chgColor)
 });
 
 colors = ['btn btn-block btn-warning', 'btn btn-block btn-success', 'btn btn-block btn-dark', 'btn btn-block btn-primary']
@@ -58,3 +58,28 @@ function getThirdFriday(year, month){
 // }
 
 // $('.btn').on('click', savePngl);
+
+$('#submit').on('click', function (event) {
+  // console log input values
+  console.log($('#NPU').val());
+  console.log($('#date').val());
+  // check which form boxes are checked
+  if ($('#draft')[0].checked) {
+    console.log('Draft');
+  };
+  if ($('#final')[0].checked) {
+    console.log('Final');
+  };
+  if ($('#distro')[0].checked) {
+    console.log('Distro');
+  };
+  if ($('#access')[0].checked) {
+    console.log('Access');
+  }
+  if ($('#approved')[0].checked) {
+    console.log('Approved');
+  }
+  if ($('#nextdoor')[0].checked) {
+    console.log('Nextdoor');
+  }
+});
