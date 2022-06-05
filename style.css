@@ -10,6 +10,10 @@ header {
   text-align: center;
 }
 
+#textZone a {
+  color: black;
+}
+
 .calendar {
   font-size: larger;
   background-color: whitesmoke;
