@@ -18,7 +18,8 @@
   </head>
   <body>
     <header>
-      <h1><strong>NPUNGL0Tron</strong></h1>
+      <h1 class="display-3"><strong>NPUNGL0Tron</strong></h1>
+      <p id="currentDay" class="lead"></p>
     </header>
     <div class='container'>
       <div class='calendar container-fluid col-11'>
@@ -27,45 +28,51 @@
       </div>
       <div class='calendar col-11'>Button grid
         <div class='row'>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
-        </div>
-        <br>
-        <div class='row'>
+           <div class='col'><button id='P' class='btn btn-block btn-primary'>P</button></div>
            <div class='col'><button id='A' class='btn btn-block btn-primary'>A</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>B</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>C</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>E</button></div>
+           <div class='col'><button id='B' class='btn btn-block btn-primary'>B</button></div>
+           <div class='col'><button id='C' class='btn btn-block btn-primary'>C</button></div>
+           <div class='col'><button id='E' class='btn btn-block btn-primary'>E</button></div>
         </div>
         <br>
         <div class='row'>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
+           <div class='col'><button id='R' class='btn btn-block btn-primary'>R</button></div>
+           <div class='col'><button id='H' class='btn btn-block btn-primary'>H</button></div>
+           <div class='col'><button id='V' class='btn btn-block btn-primary'>V</button></div>
+           <div class='col'><button id='X' class='btn btn-block btn-primary'>X</button></div>
+           <div class='col'><button id='L' class='btn btn-block btn-primary'>L</button></div>
         </div>
         <br>
         <div class='row'>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
+           <div class='col'><button id='T' class='btn btn-block btn-primary'>T</button></div>
+           <div class='col'><button id='F' class='btn btn-block btn-primary'>F</button></div>
+           <div class='col'><button id='Y' class='btn btn-block btn-primary'>Y</button></div>
+           <div class='col'><button id='K' class='btn btn-block btn-primary'>K</button></div>
+           <div class='col'><button id='I' class='btn btn-block btn-primary'>I</button></div>
         </div>
         <br>
         <div class='row'>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
-           <div class='col'><button class='btn btn-block btn-primary'>P</button></div>
+           <div class='col'><button id='G' class='btn btn-block btn-primary'>G</button></div>
+           <div class='col'><button id='Q' class='btn btn-block btn-primary'>Q</button></div>
+           <div class='col'><button id='S' class='btn btn-block btn-primary'>S</button></div>
+           <div class='col'><button id='M' class='btn btn-block btn-primary'>M</button></div>
+           <div class='col'><button id='Z' class='btn btn-block btn-primary'>Z</button></div>
+        </div>
+        <br>
+        <div class='row'>
+           <div class='col'><button id='D' class='btn btn-block btn-primary'>D</button></div>
+           <div class='col'><button id='J' class='btn btn-block btn-primary'>J</button></div>
+           <div class='col'><button id='O' class='btn btn-block btn-primary'>O</button></div>
+           <div class='col'><button id='W' class='btn btn-block btn-primary'>W</button></div>
+           <div class='col'><button id='N' class='btn btn-block btn-primary'>N</button></div>
         </div>
       </div>
     </div>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="index.js" async defer></script>
   </body>
 </html>
