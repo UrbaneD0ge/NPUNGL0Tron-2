@@ -66,8 +66,10 @@ $('#submit').on('click', function (event) {
   // check which form boxes are checked
   if ($('#draft')[0].checked) {
     console.log('Draft');
+    $('#textZone').append('<div class="card text-white bg-secondary mb-3" style="max-width: 40rem;"><div class="card-header">Draft</div><div class="card-body"><h5 class="card-title">' + $('#NPU').val() + '</h5><p class="card-text">' + $('#date').val() + '</p></div></div>');
   };
   if ($('#final')[0].checked) {
+    $('#textZone').append('<div class="card text-white bg-secondary mb-3" style="max-width: 40rem;"><div class="card-header">Final</div><div class="card-body"><h5 class="card-title">NPU-' + $('#NPU').val() + '</h5><p class="card-text">' + $('#date').val() + '</p></div></div>');
     console.log('Final');
   };
   if ($('#distro')[0].checked) {
