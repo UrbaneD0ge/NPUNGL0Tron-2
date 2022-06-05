@@ -9,6 +9,9 @@ function chgColor () {
   this.className = color;
 };
 
+// Set datepicker to today's date
+document.getElementById('date').value = new Date().toISOString().substring(0, 10);
+
 const today = $("#currentDay");
 
 function displayTime() {
@@ -48,10 +51,10 @@ function getThirdFriday(year, month){
 // Array of NPUs, starting from 1st day of month, assign to calendar grid.
 
 // Save button states to local storage
-function savePngl() {
-  var progress = document.querySelectorAll('.btn').className;
-  var pnglID = document.querySelectorAll('.btn').attr('id');
-  localstorage.setItem(progress, pnglID);
-}
+// function savePngl() {
+//   var progress = $('.btn').className.toString();
+//   var pnglID = $('.btn').attr('id');
+//   localStorage.setItem(key: progress, value: pnglID);
+// }
 
-$('.btn').on('click', savePngl);
+// $('.btn').on('click', savePngl);

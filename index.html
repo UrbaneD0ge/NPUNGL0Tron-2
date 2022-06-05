@@ -21,11 +21,82 @@
       <h1 class="display-3"><strong>NPUNGL0Tron</strong></h1>
       <p id="currentDay" class="lead"></p>
     </header>
+
+    <div class='container'>
+      <form target='_self'>
+        <div class="form-group">
+          <label for="name">NPU Designation?</label>
+          <select class="form-control" id="NPU" list="NPUs">
+
+          <datalist id="NPUs">
+            <!-- <option value="APAB">APAB</option> -->
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+            <option value="K">K</option>
+            <option value="L">L</option>
+            <option value="M">M</option>
+            <option value="N">N</option>
+            <option value="O">O</option>
+            <option value="P">P</option>
+            <option value="Q">Q</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+            <option value="T">T</option>
+            <option value="U">U</option>
+            <option value="V">V</option>
+            <option value="W">W</option>
+            <option value="X">X</option>
+            <option value="Y">Y</option>s
+            <option value="Z">Z</option>
+        </div>
+        <br></br>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" class="form-control" id="date" name="date">
+        </div>
+        <div class="form-group">
+          <legend>Document type?</legend>
+          <input type="checkbox" name="Draft_to_Chair" value="draft" id="draft">
+          <label for="draft">Draft to Chair</label>
+
+          <input type="checkbox" name="Final_to_Chair"  value="final" id="final">
+          <label for="final">Final to Chair</label>
+
+          <input type="checkbox" name="distro" value="distro" id="distro">
+          <label for="distro">Distribution List</label>
+
+          <br>
+
+          <input type="checkbox" name="access" value="access" id="access">
+          <label for="access">Meeting Access</label>
+
+          <input type="checkbox" name="approved" value="approved" id="approved">
+          <label for="approved">Presentation Approved</label>
+
+          <input type="checkbox" name="nextdoor" value="nextdoor" id="nextdoor">
+          <label for="nextdoor">Nextdoor Post</label><br>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <br>
+    </div>
+
+    <!-- gCal iFrame -->
     <div class='container'>
       <div class='calendar container-fluid col-11'>
         <div class='col-5'>Month</div>
         <iframe class='container' src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showTitle=1&showNav=1&showDate=1&showTabs=0&showCalendars=0&title=City%20of%20Atlanta%20NPU%20Meetings&showPrint=0&src=bzZtY3RoaHBoanU0OGlrc2hlOTVudWptdThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23009688" style="border:solid 2px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
+      <!-- Pungle Button Grid -->
       <div class='calendar col-11'>Button grid
         <div class='row'>
            <div class='col'><button id='P' class='btn btn-block btn-primary'>P</button></div>

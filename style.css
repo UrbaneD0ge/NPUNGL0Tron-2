@@ -17,3 +17,8 @@ header {
   margin: 5px;
   border-radius: 20px;
 }
+
+#date, #NPU {
+  width: min-content;
+  display: inline;;
+}
