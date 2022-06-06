@@ -23,7 +23,7 @@
     </header>
 
     <div class='container'>
-      <form onsubmit="return false">
+      <form class='calendar col-11' onsubmit="return false">
         <div class="form-group">
           <label for="name">NPU Designation?</label>
           <select class="form-control" id="NPU" list="NPUs">
@@ -82,6 +82,8 @@
 
         </div>
         <button id="submit" class="btn btn-primary">Submit</button>
+        <button onclick=clearForm() id="clear"
+          class="btn btn-danger ml-2">Clear</button>
       </form>
       <br>
     </div>
