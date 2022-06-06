@@ -15,7 +15,7 @@ function chgColor () {
 };
 
 // Set datepicker to today's date
-document.getElementById('date').value = new Date().toISOString().substring(0, 10);
+// document.getElementById('date').value = new Date().toISOString().substring(0, 10);
 
 const today = $("#currentDay");
 
@@ -71,7 +71,17 @@ $('#submit').on('click', function (event) {
     var meeting = {};
     // set input values to variables
     title = $('#NPU').val();
-    date = $('#date').val();
+    // date = $('#date').val();
+
+    // get datepicker input and convert to moment object
+    var dateControl = document.querySelector('input[type="date"]');
+
+    dateControl.month = moment().format("MMMM");
+    // dateControl.year = moment().format("YYYY");
+    dateControl.dayofweek = moment().format("dddd");
+    dateControl.casual = moment().format("dddd, MMMM Do");
+
+    console.log(dateControl.casual);
 
     // use getMeeting function to get meeting info
 function getMeeting() {
