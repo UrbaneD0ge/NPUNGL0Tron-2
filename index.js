@@ -31,25 +31,25 @@ setInterval(displayTime, 1000);
 // const wkdays = new moment.weekdays();
 // console.log(wkdays);
 
-const month = new moment().format("MMMM");
-const year = new moment().format("YYYY");
-console.log(month);
-console.log(year)
+// const month = new moment().format("MMMM");
+// const year = new moment().format("YYYY");
+// console.log(month);
+// console.log(year)
 
-function getThirdFriday(year, month){
-  // Convert date to moment (month 0-11)
-  var myMonth = moment({ year: year, month: month });
+// function getThirdFriday(year, month){
+//   // Convert date to moment (month 0-11)
+//   var myMonth = moment({ year: year, month: month });
 
-  // Get first Friday of the first week of the month
-  var firstFriday = myMonth.weekday(4);
-  var nWeeks = 2;
-  // Check if first Friday is in the given month
-  if( firstFriday.month() != month ){
-      nWeeks++;
-  }
-  // Return 3rd Friday of the month formatted (custom format)
-  return firstFriday.add(nWeeks, 'weeks').format("DD MMMM YYYY");
-}
+//   // Get first Friday of the first week of the month
+//   var firstFriday = myMonth.weekday(4);
+//   var nWeeks = 2;
+//   // Check if first Friday is in the given month
+//   if( firstFriday.month() != month ){
+//       nWeeks++;
+//   }
+//   // Return 3rd Friday of the month formatted (custom format)
+//   return firstFriday.add(nWeeks, 'weeks').format("DD MMMM YYYY");
+// }
 
 // NPU dates are essentially calendar columns, since they do not deviate from their weekdays. Must handle rescheduling, cancellation.
 
@@ -423,7 +423,7 @@ function getMeeting() {
     console.log('Distro');
   };
     if ($('#access')[0].checked) {
-        $('#textZone').append('<div class="card calendar col-11"><h2>VIRTUAL MEETING ACCESS INFO</h2><p id="access" onclick="copy(this)">NPU-' + title + ' MONTH Virtual meeting access info<br></br>Good afternoon,<br></br>The NPU-' + title + date + ' meeting will be held remotely.<br></br>NPU-' + title + ' | ' + date + ' ${meeting.time}<br></br>Register in advance by clicking <a href="${meeting.zURL}">HERE</a><br></br>${meeting.meet}<br></br>Please continue to work with NPU-${meeting.title} Chair ${meeting.chair} (${meeting.chairE}) to confirm details of your presentation.<br></br>Thank you,</p></div>')
+        $('#textZone').append('<div class="card calendar col-11"><h2>VIRTUAL MEETING ACCESS INFO</h2><p id="access" onclick="copy(this)">NPU-' + title + ' MONTH Virtual meeting access info<br></br>Good afternoon,<br></br>The NPU-' + title + ' ' + date + ' meeting will be held remotely.<br></br>NPU-' + title + ' | ' + date + ' ${meeting.time}<br></br>Register in advance by clicking <a href="${meeting.zURL}">HERE</a><br></br>${meeting.meet}<br></br>Please continue to work with NPU-${meeting.title} Chair ${meeting.chair} (${meeting.chairE}) to confirm details of your presentation.<br></br>Thank you,</p></div>')
     console.log('Access');
   }
     if ($('#approved')[0].checked) {
