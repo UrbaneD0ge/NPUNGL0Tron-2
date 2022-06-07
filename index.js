@@ -1,6 +1,6 @@
 var title;
 var date;
-var meeting = {foo: 'bar'};
+var meeting = {};
 
 document.querySelectorAll('.pngl').forEach(item => {
   item.addEventListener('click', chgColor)
@@ -40,16 +40,22 @@ setInterval(displayTime, 1000);
 $('#submit').on('click', function (event) {
     // set input values to variables
     title = $('#NPU').val();
-    // date = $('#date').val();
+    date = $('#date').val();
+    month = new moment(date).format("MMMM");
 
     // get datepicker input and convert to moment object
-    var dateControl = document.querySelector('input[type="date"]');
-    dateControl.month = moment().format("MMMM");
-    dateControl.year = moment().format("YYYY");
-    dateControl.dayOfWeek = moment().format("dddd");
-    dateControl.casual = moment().format("dddd, MMMM Do");
+    dateControl = document.querySelector('input[type="date"]').value;
+    dateControl = moment(dateControl);
 
-    console.log(dateControl.casual);
+    var date = new Date(dateControl);
+
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+    var dateCasual = month + '/' + day;
+
+
+    console.log(date);
 
     // use getMeeting function to get meeting info
     function getMeeting() {
@@ -386,7 +392,9 @@ $('#submit').on('click', function (event) {
     };
 
 
-    console.log(meeting.foo);
+    console.log(title);
+    console.log(dateControl);
+    console.log(meeting.meet);
 
   // check which form boxes are selected
     if ($('#draft')[0].checked) {
@@ -395,8 +403,8 @@ $('#submit').on('click', function (event) {
             + '<p id="draft" onclick="copy(this)">' + date + ' draft meeting agenda<br></br>Good day ${meeting.chairHon} and NPU-' + title + ',<br></br>Please see the attached draft version of the NPU-' + title + ' ' + date + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know <u>by EOB DAYSBEFOREPUBL</u>.<br></br>Thank you,</p></div>');
     };
     if ($('#final')[0].checked) {
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:npu-' + title + '?subject=' + date + 'Final meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov&body=Good day + $(meeting.chairHon} + and NPU-' + title + ',%0D%0DPlease see the attached Final version of the NPU-' + title + date + ' meeting agenda.%0D%0DThank you,">FINAL</a></h2>'
-            + '<p onclick="copy(this)"><strong>' + date + ' Final meeting agenda</strong><br></br>Good day ${meeting.chairHon} and NPU-' + title + ',<br></br>Please see the attached Final version of the NPU-' + title + ' ' + date + ' meeting agenda.<br></br>Thank you,</p></div>')
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:npu-' + title + '?subject=' + date + 'Final meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov&body=Good day' + meeting.chairHon + 'and NPU-' + title + ',%0D%0DPlease see the attached Final version of the NPU-' + title + date + ' meeting agenda.%0D%0DThank you,">FINAL</a></h2>'
+            + '<p onclick="copy(this)"><strong>' + date + ' Final meeting agenda</strong><br></br>Good day ' + meeting.chairHon + ' and NPU-' + title + ',<br></br>Please see the attached Final version of the NPU-' + title + ' ' + date + ' meeting agenda.<br></br>Thank you,</p></div>')
     console.log('Final');
   };
     if ($('#distro')[0].checked) {
@@ -418,7 +426,7 @@ $('#submit').on('click', function (event) {
     console.log('Nextdoor');
     }
     getMeeting(title);
-    console.log(meeting);
+    console.log(meet);
 });
 
 function clearForm() {
