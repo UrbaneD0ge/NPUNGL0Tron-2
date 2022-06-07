@@ -54,7 +54,7 @@ $('#submit').on('click', function (event) {
     // publ = moment(dateControl).subtract(5, 'weekdays').format("dddd, MMMM Do");
 
     function getPubl(dateControl) {
-        var publ = moment(date);
+        var publ = moment(date).toISOString();
         let days = 5;   // number of days to subtract
         while (days > 0) {
             date = moment().subtract(1, 'days');
