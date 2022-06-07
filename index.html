@@ -22,11 +22,11 @@
     </header>
 
     <div class='container'>
-      <form class='calendar col-11' onsubmit="return false">
+      <form class='calendar col-12' onsubmit="return false">
         <div class="form-group">
           <label for="name">NPU Designation?</label>
           <select class="form-control" id="NPU" list="NPUs">
-            <option value="APAB">APAB</option>
+            <!-- <option value="APAB">APAB</option> -->
             <option value="A">A</option>
             <option value="B">B</option>
             <option value="C">C</option>
@@ -89,7 +89,6 @@
 
     <div class='container' id='textZone'>
 
-
     </div>
 
     <!-- gCal iFrame -->
@@ -99,7 +98,8 @@
         <iframe class='container' src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showTitle=1&showNav=1&showDate=1&showTabs=0&showCalendars=0&title=City%20of%20Atlanta%20NPU%20Meetings&showPrint=0&src=bzZtY3RoaHBoanU0OGlrc2hlOTVudWptdThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23009688" style="border:solid 2px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div> -->
       <!-- Pungle Button Grid -->
-      <div class='calendar col-11'>Button grid
+      <div class='container'>
+        <div class='calendar col-12' >Button grid
         <div class='row'>
            <div class='col'><button id='P' class='pngl btn btn-block btn-primary'>P</button></div>
            <div class='col'><button id='A' class='pngl btn btn-block btn-primary'>A</button></div>
@@ -139,6 +139,7 @@
            <div class='col'><button id='W' class='pngl btn btn-block btn-primary'>W</button></div>
            <div class='col'><button id='N' class='pngl btn btn-block btn-primary'>N</button></div>
         </div>
+      </div>
       </div>
     </div>
     <!--[if lt IE 7]>

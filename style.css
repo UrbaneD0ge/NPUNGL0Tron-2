@@ -14,9 +14,9 @@ h2 {
   color: black;
 }
 
-p:hover {
+/* p:hover {
   text-decoration: underline;
-}
+} */
 
 .calendar {
   font-size: .8em;
@@ -24,6 +24,7 @@ p:hover {
   padding: 10px;
   margin: 5px;
   border-radius: 20px;
+  box-shadow: 5px 10px #888888;
 }
 
 #date, #NPU {
