@@ -45,14 +45,16 @@ $('#submit').on('click', function (event) {
 
     // get datepicker input and convert to moment object
     dateControl = document.querySelector('input[type="date"]').value;
-    dateControl = moment(dateControl);
+    date = moment(dateControl).format("MMMM Do YYYY");
+    day = moment(dateControl).format("dddd");
+    month = moment(dateControl).format("MMMM");
+    year = moment(dateControl).format("YYYY");
+    casual = moment(dateControl).format("dddd, MMMM Do");
 
-    var date = new Date(dateControl);
-
-    var day = date.getDate();
-    var month = date.getMonth() + 1;
-    var year = date.getFullYear();
-    var dateCasual = month + '/' + day;
+    // var day = date.getDate();
+    // var month = date.getMonth() + 1;
+    // var year = date.getFullYear();
+    // var dateCasual = month + '/' + day;
 
     // use getMeeting function to get meeting info
     function getMeeting() {
@@ -389,6 +391,7 @@ $('#submit').on('click', function (event) {
     };
 
     console.log(date);
+    console.log(dateControl);
     console.log(title);
 
   // check which form boxes are selected
