@@ -54,9 +54,6 @@ $('#submit').on('click', function (event) {
     var year = date.getFullYear();
     var dateCasual = month + '/' + day;
 
-
-    console.log(date);
-
     // use getMeeting function to get meeting info
     function getMeeting() {
         switch (title) {
@@ -391,10 +388,8 @@ $('#submit').on('click', function (event) {
     return meeting;
     };
 
-
+    console.log(date);
     console.log(title);
-    console.log(dateControl);
-    console.log(meeting.meet);
 
   // check which form boxes are selected
     if ($('#draft')[0].checked) {
