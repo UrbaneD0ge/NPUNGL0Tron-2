@@ -14,9 +14,9 @@ h2 {
   color: black;
 }
 
-/* p:hover {
-  text-decoration: underline;
-} */
+p:hover {
+  cursor: grab;
+}
 
 .calendar {
   font-size: .8em;
