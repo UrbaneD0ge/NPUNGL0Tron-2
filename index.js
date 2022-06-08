@@ -14,9 +14,6 @@ function chgColor () {
   this.className = color;
 };
 
-// Set datepicker to today's date
-// document.getElementById('date').value = new Date().toISOString().substring(0, 10);
-
 const today = $("#currentDay");
 
 function displayTime() {
@@ -442,6 +439,12 @@ function clearForm() {
     $('#textZone').empty();
     console.log('cleared');
 }
+
+// Set datepicker to today's date with moment.js
+$(document).ready(function () {
+    finDate =
+    $('input[type="date"]').val(new moment().add(7, 'days').toISOString(true).substring(0, 10));
+});
 
 function copy(that){
     var inp = document.createElement('input');
