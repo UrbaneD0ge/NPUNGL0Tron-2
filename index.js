@@ -93,7 +93,7 @@ $('#submit').on('click', function OnClickEvent (event) {
                 Dial In: +1 646-558-8656
                 Access Code: 934 4511 6340#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJcpc-yprz0pHtRSCH0nTWazoXg72njNpQ5R`
-                time = `7:00PM`
+                time = `6:45PM`
                 chair = `Zack Gober`
                 chairHon = `Mr. Gober`
                 chairE = `zgober@lavista.com`
@@ -402,11 +402,11 @@ $('#submit').on('click', function OnClickEvent (event) {
         let publ = getPubl(dateControl);
         console.log(publ);
         console.log('Draft');
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:npu-' + title + '?subject=NPU-' + title + ' ' + month + ' draft meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov&body=Good day ' + meeting.chairHon + ' and NPU-' + title + ',%0D%0DPlease see the attached draft version of the NPU-' + title + ' ' + month + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know by EOB DAYSBEFOREPUBL.%0D%0DThank you,">DRAFT</a></h2>'
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:NPU-' + title + '?subject=NPU-' + title + ' ' + month + ' draft meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov&body=Good day ' + meeting.chairHon + ' and NPU-' + title + ',%0D%0DPlease see the attached draft version of the NPU-' + title + ' ' + month + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know by EOB ' + publ +'.%0D%0DThank you,">DRAFT</a></h2>'
             + '<p id="draft" onclick="copy(this)"><strong>NPU-' + title + ' ' + month + ' draft meeting agenda</strong><br></br>Good day ' + meeting.chairHon + ' and NPU-' + title + ',<br></br>Please see the attached draft version of the NPU-' + title + ' ' + month + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know <u>by EOB ' + publ + '</u>.<br></br>Thank you,</p></div>');
     };
     if ($('#final')[0].checked) {
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:npu-' + title + '?subject=' + month + ' Final meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov&body=Good day ' + meeting.chairHon + ' and NPU-' + title + ',%0D%0DPlease see the attached Final version of the NPU-' + title + ' ' + month + ' meeting agenda.%0D%0DThank you,">FINAL</a></h2>'
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:NPU-' + title + '?subject=' + month + ' Final meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov&body=Good day ' + meeting.chairHon + ' and NPU-' + title + ',%0D%0DPlease see the attached Final version of the NPU-' + title + ' ' + month + ' meeting agenda.%0D%0DThank you,">FINAL</a></h2>'
             + '<p onclick="copy(this)"><strong>' + month + ' Final meeting agenda</strong><br></br>Good day ' + meeting.chairHon + ' and NPU-' + title + ',<br></br>Please see the attached Final version of the NPU-' + title + ' ' + month + ' meeting agenda.<br></br>Thank you,</p></div>')
     console.log('Final');
     };
