@@ -14,6 +14,10 @@ h2 {
   color: black;
 }
 
+p {
+  overflow-wrap: break-word;
+}
+
 p:hover {
   cursor: grab;
 }
@@ -30,4 +34,10 @@ p:hover {
 #date, #NPU {
   width: min-content;
   display: inline;
+}
+
+@media screen and (max-width: 600px) {
+  #date, #NPU {
+    display: block;
+  }
 }
