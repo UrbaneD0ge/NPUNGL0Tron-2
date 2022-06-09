@@ -1,16 +1,13 @@
-var title;
-var date;
-var meeting = {};
-
 document.querySelectorAll('.pngl').forEach(item => {
   item.addEventListener('click', chgColor)
 });
 
-colors = ['btn btn-block btn-warning', 'btn btn-block btn-success', 'btn btn-block btn-dark', 'btn btn-block btn-primary']
+var colors = ['btn btn-block btn-warning', 'btn btn-block btn-success', 'btn btn-block btn-dark', 'btn btn-block btn-primary']
 
 function chgColor () {
-  let color = colors.shift();
-  colors.push(color);
+  this.colors = this.colors || [...colors];
+  let color = this.colors.shift();
+  this.colors.push(color);
   this.className = color;
 };
 
@@ -21,7 +18,7 @@ function displayTime() {
   today.text(rightNow);
 }
 
-setInterval(displayTime, 1000);
+setInterval(displayTime, 60000);
 
 // Save button states to local storage
 // function savePngl() {
@@ -34,38 +31,39 @@ setInterval(displayTime, 1000);
 // function getMeeting(title) {
 // };
 
-$('#submit').on('click', function (event) {
+function getPubl(selectedDate) {
+    let publ = new moment(selectedDate);
+    let days = 6;   // number of days to subtract
+    while (days > 0) {
+        publ.subtract(1, 'days');
+        // Do not count weekends; we can't schedule our meetings on the weekend!
+        if (publ.isoWeekday() !== 6 && publ.isoWeekday() !== 7) {
+            days -= 1;
+        }
+    }
+    return publ.format("dddd, MMMM Do");
+};
+
+$('#submit').on('click', function OnClickEvent (event) {
     // set input values to variables
-    title = $('#NPU').val();
-    date = $('#date').val();
-    month = new moment(date).format("MMMM");
+    let title = $('#NPU').val();
 
     // get datepicker input and convert to moment object
-    dateControl = document.querySelector('input[type="date"]').value;
-    date = moment(dateControl).format("MMMM Do YYYY");
-    day = moment(dateControl).format("dddd");
-    month = moment(dateControl).format("MMMM");
-    year = moment(dateControl).format("YYYY");
-    casual = moment(dateControl).format("dddd, MMMM Do");
-    short = moment(dateControl).format("MMMM Do");
+    dateControl = moment(document.querySelector('input[type="date"]').value);
+    date = dateControl.format("MMMM Do YYYY");
+    day = dateControl.format("dddd");
+    month = dateControl.format("MMMM");
+    year = dateControl.format("YYYY");
+    casual = dateControl.format("dddd, MMMM Do");
+    short = dateControl.format("MMMM Do");
     // publ = date minus 5 business days
     // publ = moment(dateControl).subtract(5, 'weekdays').format("dddd, MMMM Do");
 
-    function getPubl(dateControl) {
-        var publ = moment(date).toISOString();
-        let days = 5;   // number of days to subtract
-        while (days > 0) {
-            date = moment().subtract(1, 'days');
-            if (date.isoWeekday() !== 6 && date.isoWeekday() !== 7) {
-                days -= 1;
-            }
-        return publ = moment(date).format("dddd, MMMM Do");
-        }
-    };
+
 
     // use getMeeting function to get meeting info
-    function getMeeting() {
-        switch (title) {
+    function getMeeting(meetDetailProto) {
+        switch (meetDetailProto) {
             case 'A':
                 meet = `Meeting ID: 856 7471 3054
                 Dial In: +1 646 558 8656
@@ -78,7 +76,7 @@ $('#submit').on('click', function (event) {
                 planner = `Joel Carnow`
                 plannerE = `jdcarnow@atlantaga.gov`
                 break;
-                case 'B':
+            case 'B':
                 meet = `Meeting ID: 832 4836 8602
                 Dial In: +1 646 558 8656
                 Access Code: 832 4836 8602#`
@@ -90,7 +88,7 @@ $('#submit').on('click', function (event) {
                 planner = `Jessica Lavandier`
                 plannerE = `jlavandier@atlantaga.gov`
                 break;
-                case 'C':
+            case 'C':
                 meet = `Meeting ID: 934 4511 6340
                 Dial In: +1 646-558-8656
                 Access Code: 934 4511 6340#`
@@ -104,8 +102,8 @@ $('#submit').on('click', function (event) {
                 break;
             case 'D':
                 meet = `Meeting ID: 953 5469 3520
-        Dial In: +1 646-558-8656
-        Access Code: 953 5469 3520#`
+                Dial In: +1 646-558-8656
+                Access Code: 953 5469 3520#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJEucu2upzgvGNRkuGmiYcE2akuYMkFc1av`
                 time = `7:30PM`
                 chair = `Jim Martin`
@@ -116,7 +114,7 @@ $('#submit').on('click', function (event) {
                 break;
             case 'E':
                 meet = `Webinar ID: 920 3606 4688
-        Webinar ID: +1 929-436-2866`
+                Webinar ID: +1 929-436-2866`
                 zURL = `https://us06web.zoom.us/webinar/register/WN_TejPEO2GTDygUW6uq02yAg`
                 time = `6:30PM`
                 chair = `Nabil Hammam`
@@ -393,20 +391,19 @@ $('#submit').on('click', function (event) {
             //     console.log(`Please select one of the 25 NPUs A-Z or APAB.`)
             //     break;
         }
-    Object.assign(meeting, { meet: meet, chair: chair, planner: planner, time: time, chairE: chairE, plannerE: plannerE, zURL: zURL, chairHon: chairHon });
-    return meeting;
+    return { meet: meet, chair: chair, planner: planner, time: time, chairE: chairE, plannerE: plannerE, zURL: zURL, chairHon: chairHon };
     };
 
-    console.log(date);
     console.log(title);
+    let meeting = getMeeting(title);
 
     // check which form boxes are selected
     if ($('#draft')[0].checked) {
-        var publ = getPubl();
+        let publ = getPubl(dateControl);
         console.log(publ);
         console.log('Draft');
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:npu-' + title + '?subject=NPU-' + title + ' ' + month + ' draft meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov&body=Good day ${meeting.chairHon} and NPU-$' + title + ',%0D%0DPlease see the attached draft version of the NPU-' + title + ' ' + month + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know by EOB DAYSBEFOREPUBL.%0D%0DThank you,">DRAFT</a></h2>'
-            + '<p id="draft" onclick="copy(this)">NPU-' + title + ' ' + month + ' draft meeting agenda<br></br>Good day ${meeting.chairHon} and NPU-' + title + ',<br></br>Please see the attached draft version of the NPU-' + title + ' ' + month + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know <u>by EOB DAYSBEFOREPUBL</u>.<br></br>Thank you,</p></div>');
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:npu-' + title + '?subject=NPU-' + title + ' ' + month + ' draft meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov&body=Good day ' + meeting.chairHon + ' and NPU-$' + title + ',%0D%0DPlease see the attached draft version of the NPU-' + title + ' ' + month + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know by EOB DAYSBEFOREPUBL.%0D%0DThank you,">DRAFT</a></h2>'
+            + '<p id="draft" onclick="copy(this)">NPU-' + title + ' ' + month + ' draft meeting agenda<br></br>Good day ' + meeting.chairHon + ' and NPU-' + title + ',<br></br>Please see the attached draft version of the NPU-' + title + ' ' + month + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know <u>by EOB ' + publ + '</u>.<br></br>Thank you,</p></div>');
     };
     if ($('#final')[0].checked) {
         $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:npu-' + title + '?subject=' + month + 'Final meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov&body=Good day' + meeting.chairHon + 'and NPU-' + title + ',%0D%0DPlease see the attached Final version of the NPU-' + title + month + ' meeting agenda.%0D%0DThank you,">FINAL</a></h2>'
@@ -414,16 +411,16 @@ $('#submit').on('click', function (event) {
     console.log('Final');
     };
     if ($('#distro')[0].checked) {
-        $('#textZone').append('<div  class="y-2 calendar col-12"><h2><a href="mailto:npumail@atlantaga.gov?subject=NPU -' + title + ' Monthly Meeting Notification&subject=NPU – ' + title + ' Monthly Meeting Notification&body=Greetings!%0D%0A%0D%0AYou are receiving this e-mail because you opted in for monthly meeting notices for NPU-' + title + '.%0D%0A%0D%0AAgendas for monthly NPU meetings are posted on our website: https://www.atlantaga.gov/government/departments/city-planning/neighborhood-and-npu-contacts%0D%0A%0D%0ADATE: ' + date + '%0DTIME: ${meeting.time}%0DLOCATION: Virtual%0D%0A%0D%0ATo register in advance, go to:%0D${meeting.zURL}%0D${meeting.meet}%0D%0A%0D%0ACity of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!%0D%0A%0D%0AIf you desire additional information regarding NPU-' + title + ', please contact the following person(s):%0D%0A%0D%0ANPU Chair: ${meeting.chair} (${meeting.chairE})%0DNPU Planner: ${meeting.planner} (${meeting.plannerE})%0D%0A%0D%0AThank you,">DISTRO LIST</a></h2>'
-            + '<p id="distro" onclick="copy(this)"><strong>NPU – ' + title + ' Monthly Meeting Notification</strong><br></br>Greetings!<br></br>You are receiving this e-mail because you opted in for monthly meeting notices for NPU-' + title + '.<br></br>Agendas for monthly NPU meetings are posted on our website:<br><a href="https://www.atlantaga.gov/government/departments/city-planning/neighborhood-and-npu-contacts">Directory and NPU Meeting Agendas | Atlanta, GA (AtlantaGA.gov)</a><br></br>DATE: ' + date + '<br>TIME: ${meeting.time}<br>LOCATION: Virtual<br>Register in advance by clicking <a href="${meeting.zURL}">HERE</a><br>${meeting.meet}<br></br>City of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!<br></br>If you desire additional information regarding NPU-' + title + ', please contact the following person(s):<br></br>NPU Chair: ${meeting.chair} (${meeting.chairE})<br>NPU Planner: ${meeting.planner} (${meeting.plannerE})<br></br>Thank you,</p></div>')
+        $('#textZone').append('<div  class="y-2 calendar col-12"><h2><a href="mailto:npumail@atlantaga.gov?subject=NPU -' + title + ' Monthly Meeting Notification&subject=NPU – ' + title + ' Monthly Meeting Notification&body=Greetings!%0D%0A%0D%0AYou are receiving this e-mail because you opted in for monthly meeting notices for NPU-' + title + '.%0D%0A%0D%0AAgendas for monthly NPU meetings are posted on our website: https://www.atlantaga.gov/government/departments/city-planning/neighborhood-and-npu-contacts%0D%0A%0D%0ADATE: ' + date + '%0DTIME: ' + meeting.time + '%0DLOCATION: Virtual%0D%0A%0D%0ATo register in advance, go to:%0D' + meeting.zURL + '%0D' + meeting.meet + '%0D%0A%0D%0ACity of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!%0D%0A%0D%0AIf you desire additional information regarding NPU-' + title + ', please contact the following person(s):%0D%0A%0D%0ANPU Chair: ' + meeting.chair+ ' (' + meeting.chairE + ')%0DNPU Planner: ' + meeting.planner + ' (' + meeting.plannerE + ')%0D%0A%0D%0AThank you,">DISTRO LIST</a></h2>'
+            + '<p id="distro" onclick="copy(this)"><strong>NPU – ' + title + ' Monthly Meeting Notification</strong><br></br>Greetings!<br></br>You are receiving this e-mail because you opted in for monthly meeting notices for NPU-' + title + '.<br></br>Agendas for monthly NPU meetings are posted on our website:<br><a href="https://www.atlantaga.gov/government/departments/city-planning/neighborhood-and-npu-contacts">Directory and NPU Meeting Agendas | Atlanta, GA (AtlantaGA.gov)</a><br></br>DATE: ' + date + '<br>TIME: ' + meeting.time + '<br>LOCATION: Virtual<br>Register in advance by clicking <a href="' + meeting.zURL + '">HERE</a><br>' + meeting.meet + '<br></br>City of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!<br></br>If you desire additional information regarding NPU-' + title + ', please contact the following person(s):<br></br>NPU Chair: ' + meeting.chair+ ' (' + meeting.chairE + ')<br>NPU Planner: ' + meeting.planner + ' (' + meeting.plannerE + ')<br></br>Thank you,</p></div>')
     console.log('Distro');
      };
     if ($('#access')[0].checked) {
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2>VIRTUAL MEETING ACCESS INFO</h2><p id="access" onclick="copy(this)">NPU-' + title + month + ' Virtual meeting access info<br></br>Hello,<br></br>The NPU-' + title + ' ' + month + ' meeting will be held remotely.<br></br>NPU-' + title + ' | ' + casual + ' ${meeting.time}<br></br>Register in advance by clicking <a href="${meeting.zURL}">HERE</a><br></br>${meeting.meet}<br></br>Please continue to work with NPU-' + title + ' Chair ${meeting.chair} (${meeting.chairE}) to confirm details of your presentation.<br></br>Thank you,</p></div>')
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2>VIRTUAL MEETING ACCESS INFO</h2><p id="access" onclick="copy(this)">NPU-' + title + ' ' + month + ' Virtual meeting access info<br></br>Hello,<br></br>The NPU-' + title + ' ' + month + ' meeting will be held remotely.<br></br>NPU-' + title + ' | ' + casual + ' ' + meeting.time + '<br></br>Register in advance by clicking <a href="' + meeting.zURL + '">HERE</a><br>' + meeting.meet + '<br></br>Please continue to work with NPU-' + title + ' Chair ' + meeting.chair + ' (' + meeting.chairE + ') to confirm details of your presentation.<br></br>Thank you,</p></div>')
     console.log('Access');
     }
     if ($('#approved')[0].checked) {
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:?subject=APPROVED NPU-' + title + ' ' + month + ' presentation&cc=kdunlap@atlantaga.gov; dvasquez@atlantaga.gov&body=Hello,%0D%0A%0D%0AYour request to present at the NPU-' + title + ' ' + short + ' has been approved.%0D%0A%0D%0APlease reach out to ${meeting.chair} (${meeting.chairE}) to iron out the details of the presentation.%0D%0A%0D%0AThank you,%0D%0A%0D%0A">PRESENTATION APPROVED</a></h2>'
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:?subject=APPROVED NPU-' + title + ' ' + month + ' presentation&cc=kdunlap@atlantaga.gov; dvasquez@atlantaga.gov&body=Hello,%0D%0A%0D%0AYour request to present at the NPU-' + title + ' ' + short + ' has been approved.%0D%0A%0D%0APlease reach out to ' + meeting.chair + ' (' + meeting.chairE + ') to iron out the details of the presentation.%0D%0A%0D%0AThank you,%0D%0A%0D%0A">PRESENTATION APPROVED</a></h2>'
             + '<p id="approved" onclick="copy(this)"><strong>[APPROVED] NPU-' + title + ' ' + month + ' presentation</strong><br></br>Hello,<br></br>Your request to present at the NPU-' + title + ' ' + short + ' meeting has been approved.<br></br>Please reach out to NPU-' + title + ' Chair ' + meeting.chair + ' (' + (meeting.chairE) + ') to iron out the details of the presentation.<br></br>Thank you,</p></div>')
     console.log('Approved');
     }
@@ -431,8 +428,6 @@ $('#submit').on('click', function (event) {
         $('#textZone').append('<div class="y-2 calendar col-12"><h2>NEXTDOOR</h2><p id="nextdoor" onclick="copy(this)"><strong>NPU-' + title + ' | ' + date + ', ' + meeting.time + '</strong><br></br>Hey Neighbors!<br></br>The summer is upon us and Atlanta is growing as fast as the Kudzu. Attend your NPU meetings to hear what’s happening in your neighborhood, and have your say on the projects and events that affect you!<br></br>NPU-' + title + ' meets next ' + date + ', at ' + meeting.time + '<br></br>To register in advance go to:<br>' + meeting.zURL + '<br>' + meeting.meet + '<br></br>Thank you,</p></div>')
     console.log('Nextdoor');
     }
-    getMeeting(title);
-    console.log(meet);
 });
 
 function clearForm() {
@@ -442,8 +437,7 @@ function clearForm() {
 
 // Set datepicker to today's date with moment.js
 $(document).ready(function () {
-    finDate =
-    $('input[type="date"]').val(new moment().add(7, 'days').toISOString(true).substring(0, 10));
+    finDate = $('input[type="date"]').val(new moment().add(7, 'days').toISOString(true).substring(0, 10));
 });
 
 function copy(that){
