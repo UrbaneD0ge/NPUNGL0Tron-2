@@ -435,10 +435,10 @@ function clearForm() {
     console.log('cleared');
 }
 
-function doFinal() {
-    $('draft')[0].value = false;
-    console.log('beep boop');
-}
+// function doFinal() {
+//     $('draft')[0].value = false;
+//     console.log('beep boop');
+// }
 
 // Set datepicker to today's date with moment.js
 $(document).ready(function () {
