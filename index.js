@@ -188,6 +188,7 @@ $('#submit').on('click', function OnClickEvent (event) {
 Meeting ID: 961 2883 9632
 Dial In: +1 646 558 8656
 Access Code: 961 2883 9632#
+
 And in person:
 City of Refuge
 Workforce Innovation Hub Room
