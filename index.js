@@ -184,9 +184,16 @@ $('#submit').on('click', function OnClickEvent (event) {
                 plannerE = `kmholmes@atlantaga.gov`
                 break;
             case 'K':
-                meet = `Meeting ID: 961 2883 9632
-        Dial In: +1 646 558 8656
-        Access Code: 961 2883 9632#`
+                meet = `Online:
+Meeting ID: 961 2883 9632
+Dial In: +1 646 558 8656
+Access Code: 961 2883 9632#
+And in person:
+City of Refuge
+Workforce Innovation Hub Room
+1300 Joseph E. Boone Blvd NW,
+30314
+`
                 zURL = `https://us06web.zoom.us/meeting/register/tJ0pfuuuqjosG9SFlf4neD6B5HLB18AX5zGe`
                 time = `6:30PM`
                 chair = `Mohamed Sillah`
@@ -355,7 +362,7 @@ $('#submit').on('click', function OnClickEvent (event) {
                 meet = `Meeting ID: 956 6564 6943
         Dial In: +1 646 558 8656
         Access Code: 956 6564 6943#`
-                zURL = `https://us06web.zoom.us/meeting/register/tJAtcempqTIiG9Gd_h-5Tcordb6gJXHz14r1`
+                zURL = `https://us06web.zoom.us/meeting/register/tJErceyuqj0jHtfa2z98DbpK90NXM7EZk9Tk`
                 time = `7:00PM`
                 chair = `Troy Nunnally`
                 chairHon = `Dr. Nunnally`
