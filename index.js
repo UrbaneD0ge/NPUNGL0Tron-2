@@ -11,15 +11,6 @@ function chgColor () {
   this.className = color;
 };
 
-const today = $("#currentDay");
-
-function displayTime() {
-  var rightNow = moment().format("LLLL");
-  today.text(rightNow);
-}
-
-setInterval(displayTime, 60000);
-
 // Save button states to local storage
 // function savePngl() {
 //   var progress = $('.btn').className.toString();
