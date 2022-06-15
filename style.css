@@ -31,6 +31,12 @@ p:hover {
   box-shadow: 5px 10px #888888;
 }
 
+#DCP {
+  font-weight: bolder;
+  text-shadow: black 5px 5px;
+  ;
+}
+
 #date, #NPU {
   width: min-content;
   display: inline;
