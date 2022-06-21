@@ -234,7 +234,7 @@ Workforce Innovation Hub Room
                 meet = `Meeting ID: 812 4045 1335
         Dial In: +1 646 558 8656
         Access Code: 812 4045 1335#`
-                zURL = `https://us06web.zoom.us/meeting/register/tJIsdeGgrTIsGda9TZkaUfsNakMmS0zxpVe4`
+                zURL = `https://us06web.zoom.us/meeting/register/tZUvc-msqzopGdHkG2UKue12pd08rkIAkpc_`
                 time = `6:30PM`
                 chair = `Jeanne Tropper`
                 chairHon = `Ms. Tropper`
