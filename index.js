@@ -240,7 +240,7 @@ Workforce Innovation Hub Room
                 chairHon = `Ms. Tropper`
                 chairE = `chair@atlantanpuo.org`
                 planner = `Racquel Jackson`
-                plannerE = `acanales@atlantaga.gov`
+                plannerE = `rtjackson@AtlantaGa.gov`
                 break;
             case 'P':
                 meet = `Meeting ID: 940 8702 7097
