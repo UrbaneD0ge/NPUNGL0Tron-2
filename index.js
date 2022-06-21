@@ -434,31 +434,40 @@ function clearForm() {
     console.log('cleared');
 }
 
-// function doFinal() {
-//     $('draft')[0].value = false;
-//     console.log('beep boop');
-// }
-
 // Set datepicker to today's date with moment.js
 $(document).ready(function () {
     finDate = $('input[type="date"]').val(new moment().add(7, 'days').toISOString(true).substring(0, 10));
 });
 
-function copy(that){
-    var inp = document.createElement('input');
-    document.body.appendChild(inp)
-    inp.value = that.textContent;
-    inp.select();
-    // document.execCommand('copy', false);
-    navigator.clipboard.writeText(inp.value).then(function() {
+// function copy(that){
+//     var inp = document.createElement('input');
+//     document.body.appendChild(inp)
+//     inp.value = that.textContent;
+//     inp.select();
+//     navigator.clipboard.writeText(inp.value).then(function() {
+//         console.log('Copying to clipboard was successful!');
+//         // flash text on copy
+//         $(that).css('color', '#fff');
+//         setTimeout(function(){
+//             $(that).css('color', '#000');
+//         }, 100);
+//     }, function(err) {
+//       console.error('Could not copy text: ', err);
+//     });
+//     inp.remove();
+// }
+
+// select and copy text on click
+function copy(that) {
+    $(this).select();
+    navigator.clipboard.writeText(Selection.value).then(function () {
         console.log('Copying to clipboard was successful!');
         // flash text on copy
         $(that).css('color', '#fff');
-        setTimeout(function(){
+        setTimeout(function () {
             $(that).css('color', '#000');
         }, 100);
-    }, function(err) {
-      console.error('Could not copy text: ', err);
+    }, function (err) {
+        console.error('Could not copy text: ', err);
     });
-    inp.remove();
-  }
+};
