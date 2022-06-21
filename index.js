@@ -65,9 +65,10 @@ $('#submit').on('click', function OnClickEvent (event) {
     function getMeeting(meetDetailProto) {
         switch (meetDetailProto) {
             case 'A':
-                meet = `Meeting ID: 856 7471 3054
-                Dial In: +1 646 558 8656
-                Access Code: 856 7471 3054#`
+                meet = `Meeting ID: 856 7471 3054`
+                dialIn = `Dial In: +1 646 558 8656`
+                aCode = `Access Code: 856 7471 3054#`
+                hyb = false;
                 zURL = `https://atlantaga-gov.zoom.us/meeting/register/tZErcO2vrzgqH9ArhFC4ZPNWdLs4yiiBa749`
                 time = `7:00PM`
                 chair = `Brinkley Dickerson`
