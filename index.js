@@ -46,8 +46,8 @@ $('#submit').on('click', function OnClickEvent (event) {
         switch (meetDetailProto) {
             case 'A':
                 meet = `Meeting ID: 856 7471 3054
-                Dial In: +1 646 558 8656
-                Access Code: 856 7471 3054#`
+Dial In: +1 646 558 8656
+Access Code: 856 7471 3054#`
                 zURL = `https://atlantaga-gov.zoom.us/meeting/register/tZErcO2vrzgqH9ArhFC4ZPNWdLs4yiiBa749`
                 time = `7:00PM`
                 chair = `Brinkley Dickerson`
@@ -58,8 +58,8 @@ $('#submit').on('click', function OnClickEvent (event) {
                 break;
             case 'B':
                 meet = `Meeting ID: 832 4836 8602
-                Dial In: +1 646 558 8656
-                Access Code: 832 4836 8602#`
+Dial In: +1 646 558 8656
+Access Code: 832 4836 8602#`
                 zURL = `https://us06web.zoom.us/meeting/register/tZcvc-GrqDMsGtbvnnKzpDF2BbUXxQuxx_N9`
                 time = `7:00PM`
                 chair = `Nancy Bliwise`
@@ -70,8 +70,8 @@ $('#submit').on('click', function OnClickEvent (event) {
                 break;
             case 'C':
                 meet = `Meeting ID: 934 4511 6340
-                Dial In: +1 646-558-8656
-                Access Code: 934 4511 6340#`
+Dial In: +1 646-558-8656
+Access Code: 934 4511 6340#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJcpc-yprz0pHtRSCH0nTWazoXg72njNpQ5R`
                 time = `6:45PM`
                 chair = `Zack Gober`
@@ -82,8 +82,8 @@ $('#submit').on('click', function OnClickEvent (event) {
                 break;
             case 'D':
                 meet = `Meeting ID: 953 5469 3520
-                Dial In: +1 646-558-8656
-                Access Code: 953 5469 3520#`
+Dial In: +1 646-558-8656
+Access Code: 953 5469 3520#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJEucu2upzgvGNRkuGmiYcE2akuYMkFc1av`
                 time = `7:30PM`
                 chair = `Jim Martin`
@@ -94,7 +94,7 @@ $('#submit').on('click', function OnClickEvent (event) {
                 break;
             case 'E':
                 meet = `Webinar ID: 920 3606 4688
-                Webinar ID: +1 929-436-2866`
+Webinar ID: +1 929-436-2866`
                 zURL = `https://us06web.zoom.us/webinar/register/WN_TejPEO2GTDygUW6uq02yAg`
                 time = `6:30PM`
                 chair = `Nabil Hammam`
@@ -105,8 +105,8 @@ $('#submit').on('click', function OnClickEvent (event) {
                 break;
             case 'F':
                 meet = `Meeting ID: 928 1513 1493
-        Dial In: +1 646-558-8656
-        Access Code: 928 1513 1493#`
+Dial In: +1 646-558-8656
+Access Code: 928 1513 1493#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJYlduyprTouE9c3GbvSNXk-QnBIMbRu-Zg3`
                 time = `7:00PM`
                 chair = `Debbie Skopczynski`
@@ -117,8 +117,8 @@ $('#submit').on('click', function OnClickEvent (event) {
                 break;
             case 'G':
                 meet = `Meeting ID: 935 8093 0222
-        Dial In: +1 646-558-8656
-        Access Code: 935 8093 0222#`
+Dial In: +1 646-558-8656
+Access Code: 935 8093 0222#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJcof-mhrTsoGNbC6XrB8Sr6HKX7E8hPLfjH`
                 time = `7:00PM`
                 chair = `Andrew Anderson`
@@ -129,8 +129,8 @@ $('#submit').on('click', function OnClickEvent (event) {
                 break;
             case 'H':
                 meet = `Meeting ID: 976 5253 7837
-        Dial In: +1 646-558-8656
-        Access Code: 976 5253 7837#`
+Dial In: +1 646-558-8656
+Access Code: 976 5253 7837#`
                 zURL = `https://zoom.us/j/97652537837`
                 time = `7:00PM`
                 chair = `R.R. Harris`
@@ -141,8 +141,8 @@ $('#submit').on('click', function OnClickEvent (event) {
                 break;
             case 'I':
                 meet = `Meeting ID: 926 1333 2610
-        Dial In: +1 646-558-8656
-        Access Code: 926 1333 2610#`
+Dial In: +1 646-558-8656
+Access Code: 926 1333 2610#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJYrduqrrTksG9Q0zhO-fIWbSdULod3adqpH`
                 time = `7:00PM`
                 chair = `Eunice M. Glover`
@@ -153,8 +153,8 @@ $('#submit').on('click', function OnClickEvent (event) {
                 break;
             case 'J':
                 meet = `Meeting ID: 914 9575 9127
-        Dial In: +1 646-558-8656
-        Access Code: 914 9575 9127#`
+Dial In: +1 646-558-8656
+Access Code: 914 9575 9127#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJUpfuyvqzIrGNPisSUqavtB5wdLiJTeHVFD`
                 time = `7:00PM`
                 chair = `Anissa Ferrell`
@@ -172,9 +172,7 @@ Access Code: 961 2883 9632#
 And in person:
 City of Refuge
 Workforce Innovation Hub Room
-1300 Joseph E. Boone Blvd NW,
-30314
-`
+1300 Joseph E. Boone Blvd NW, 30314`
                 zURL = `https://us06web.zoom.us/meeting/register/tJ0pfuuuqjosG9SFlf4neD6B5HLB18AX5zGe`
                 time = `6:30PM`
                 chair = `Mohamed Sillah`
@@ -185,8 +183,8 @@ Workforce Innovation Hub Room
                 break;
             case 'L':
                 meet = `Meeting ID: 961 2883 9632
-        Dial In: +1 646 558 8656
-        Access Code: 961 2883 9632#`
+Dial In: +1 646 558 8656
+Access Code: 961 2883 9632#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJIsdeGgrTIsGda9TZkaUfsNakMmS0zxpVe4`
                 time = `6:30PM`
                 chair = `Shade'Y. Jones`
@@ -197,8 +195,8 @@ Workforce Innovation Hub Room
                 break;
             case 'M':
                 meet = `Meeting ID: 972 3364 7127
-        Dial In: +1 646 558 8656
-        Access Code: 972 3364 7127#`
+Dial In: +1 646 558 8656
+Access Code: 972 3364 7127#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJMvdOquqjwrGNMzjeUO15u88PSooneRz2Fp`
                 time = `6:15PM`
                 chair = `Forrest Coley`
@@ -209,8 +207,8 @@ Workforce Innovation Hub Room
                 break;
             case 'N':
                 meet = `Meeting ID: 970 8448 6658
-        Dial In: +1 646 558 8656
-        Access Code: 970 8448 6658#`
+Dial In: +1 646 558 8656
+Access Code: 970 8448 6658#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJMtf-2spj0sH9z2bFgZI2LX-Bna7OWVyoFq`
                 time = `7:00PM`
                 chair = `Catherine Woodling`
@@ -221,8 +219,8 @@ Workforce Innovation Hub Room
                 break;
             case 'O':
                 meet = `Meeting ID: 812 4045 1335
-        Dial In: +1 646 558 8656
-        Access Code: 812 4045 1335#`
+Dial In: +1 646 558 8656
+Access Code: 812 4045 1335#`
                 zURL = `https://us06web.zoom.us/meeting/register/tZUvc-msqzopGdHkG2UKue12pd08rkIAkpc_`
                 time = `6:30PM`
                 chair = `Jeanne Tropper`
@@ -233,8 +231,8 @@ Workforce Innovation Hub Room
                 break;
             case 'P':
                 meet = `Meeting ID: 940 8702 7097
-        Dial In: +1 646 558 8656
-        Access Code: 940 8702 7097#`
+Dial In: +1 646 558 8656
+Access Code: 940 8702 7097#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJAtf-6orDwqE9MQK1U4WkG2s0y9ZSsZj55C`
                 time = `7:00PM`
                 chair = `Reginald Rushin`
@@ -245,8 +243,8 @@ Workforce Innovation Hub Room
                 break;
             case 'Q':
                 meet = `Meeting ID: 985 5727 1692
-        Dial In: +1 646 558 8656
-        Access Code: 985 5727 1692#`
+Dial In: +1 646 558 8656
+Access Code: 985 5727 1692#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJwocu6qqTosE9bW-XHCnSGMWaOAnKCKqrkS`
                 time = `6:30PM`
                 chair = `Corrie McCrary`
@@ -257,8 +255,8 @@ Workforce Innovation Hub Room
                 break;
             case 'R':
                 meet = `Meeting ID: 886 2169 6544
-        Dial In: +1 646 558 8656
-        Access Code: 886 2169 6544#`
+Dial In: +1 646 558 8656
+Access Code: 886 2169 6544#`
                 zURL = `https://us06web.zoom.us/meeting/register/tZwrdeiupz0vHtCSIPdEIa-N6avVbaNnGXlb`
                 time = `7:00PM`
                 chair = `Donovan A. Dodds`
@@ -269,8 +267,8 @@ Workforce Innovation Hub Room
                 break;
             case 'S':
                 meet = `Meeting ID: 993 2987 4388
-        Dial In: +1 646 558 8656
-        Access Code: 993 2987 4388#`
+Dial In: +1 646 558 8656
+Access Code: 993 2987 4388#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJ0udeCgqT8pEtycXQZ9s7Tk4_0J_73DZmQD`
                 time = `7:00PM`
                 chair = `Nick Hess`
@@ -281,8 +279,8 @@ Workforce Innovation Hub Room
                 break;
             case 'T':
                 meet = `Meeting ID: 973 7964 7582
-        Dial In: +1 646 558 8656
-        Access Code: 973 7964 7582#`
+Dial In: +1 646 558 8656
+Access Code: 973 7964 7582#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJMucOCuqjwvEtbo8Vddwe6J5Ykv5858FP9y`
                 time = `7:00PM`
                 chair = `Angela Clyde`
@@ -293,8 +291,8 @@ Workforce Innovation Hub Room
                 break;
             case 'U':
                 meet = `Meeting ID: 123 4567 8901
-        Dial In: +1 555 555 5555
-        Access Code: 123 4567 8901#`
+Dial In: +1 555 555 5555
+Access Code: 123 4567 8901#`
                 zURL = `https://kipdunlap.me/`
                 time = `10:24PM`
                 chair = `Kip Dunlap`
@@ -305,8 +303,8 @@ Workforce Innovation Hub Room
                 break;
             case 'V':
                 meet = `Meeting ID: 992 1132 0112
-        Dial In: +1 646 558 8656
-        Access Code: 992 1132 0112#`
+Dial In: +1 646 558 8656
+Access Code: 992 1132 0112#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJ0vduirrDsrG9Zu7U9P7xTvxATCljNqAgyJ`
                 time = `7:00PM`
                 chair = `Stephanie Flowers`
@@ -317,8 +315,8 @@ Workforce Innovation Hub Room
                 break;
             case 'W':
                 meet = `Meeting ID: 916 2580 5725
-        Dial In: +1 646 558 8656
-        Access Code: 916 2580 5725#`
+Dial In: +1 646 558 8656
+Access Code: 916 2580 5725#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJUrdeygrj4tGNFBx8eTSLrBvv1Zy4uPsqgD`
                 time = `7:00PM`
                 chair = `Ronald Lall`
@@ -329,8 +327,8 @@ Workforce Innovation Hub Room
                 break;
             case 'X':
                 meet = `Meeting ID: 940 6017 9815
-        Dial In: +1 646 558 8656
-        Access Code: 940 6017 9815#`
+Dial In: +1 646 558 8656
+Access Code: 940 6017 9815#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJAtcempqTIiG9Gd_h-5Tcordb6gJXHz14r1`
                 time = `7:00PM`
                 chair = `Zachary Adriaenssens`
@@ -341,8 +339,8 @@ Workforce Innovation Hub Room
                 break;
             case 'Y':
                 meet = `Meeting ID: 956 6564 6943
-        Dial In: +1 646 558 8656
-        Access Code: 956 6564 6943#`
+Dial In: +1 646 558 8656
+Access Code: 956 6564 6943#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJErceyuqj0jHtfa2z98DbpK90NXM7EZk9Tk`
                 time = `7:00PM`
                 chair = `Troy Nunnally`
@@ -353,8 +351,8 @@ Workforce Innovation Hub Room
                 break;
             case 'Z':
                 meet = `Meeting ID: 929 8209 4616
-        Dial In: +1 646 558 8656
-        Access Code: 929 8209 4616#`
+Dial In: +1 646 558 8656
+Access Code: 929 8209 4616#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJYkf-uopz8sG9J66kd94W5qRcrwP2Qb_jQ7`
                 time = `7:00PM`
                 chair = `Anne E. Phillips`
@@ -365,8 +363,8 @@ Workforce Innovation Hub Room
                 break;
             case 'APAB':
                 meet = `Meeting ID: 947 9575 5692
-        Dial In: +1 646-558-8656
-        Access Code: 947 9575 5692#`
+Dial In: +1 646-558-8656
+Access Code: 947 9575 5692#`
                 zURL = `https://us06web.zoom.us/meeting/register/tJAqfuyvqz4sE9aRG-HDEoLldjZtzVXF4uuK`
                 time = `10:00AM`
                 chair = `Anne E. Phillips`
@@ -391,20 +389,20 @@ Workforce Innovation Hub Room
         console.log(publ);
         console.log('Draft');
         $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:NPU-' + title + '?subject=NPU-' + title + ' ' + month + ' draft meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov&body=Good day ' + meeting.chairHon + ' and NPU-' + title + ',%0D%0DPlease see the attached draft version of the NPU-' + title + ' ' + month + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know by EOB ' + publ +'.%0D%0DThank you,">DRAFT</a></h2>'
-            + '<p id="draft" onclick="copy(this)"><strong>NPU-' + title + ' ' + month + ' draft meeting agenda</strong><br></br>Good day ' + meeting.chairHon + ' and NPU-' + title + ',<br></br>Please see the attached draft version of the NPU-' + title + ' ' + month + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know <u>by EOB ' + publ + '</u>.<br></br>Thank you,</p></div>');
+            + '<p id="draft" onclick="copy(this)"><strong>NPU-' + title + ' ' + month + ' draft meeting agenda</strong><br>Good day ' + meeting.chairHon + ' and NPU-' + title + ',<br></br>Please see the attached draft version of the NPU-' + title + ' ' + month + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know <u>by EOB ' + publ + '</u>.<br></br>Thank you,</p></div>');
     };
     if ($('#final')[0].checked) {
         $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:NPU-' + title + '?subject=' + month + ' Final meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov; snjenkins@atlantaga.gov&body=Good day ' + meeting.chairHon + ' and NPU-' + title + ',%0D%0DPlease see the attached Final version of the NPU-' + title + ' ' + month + ' meeting agenda.%0D%0DThank you,">FINAL</a></h2>'
-            + '<p onclick="copy(this)"><strong>' + month + ' Final meeting agenda</strong><br></br>Good day ' + meeting.chairHon + ' and NPU-' + title + ',<br></br>Please see the attached Final version of the NPU-' + title + ' ' + month + ' meeting agenda.<br></br>Thank you,</p></div>')
+            + '<p onclick="copy(this)"><strong>' + month + ' Final meeting agenda</strong><br>Good day ' + meeting.chairHon + ' and NPU-' + title + ',<br></br>Please see the attached Final version of the NPU-' + title + ' ' + month + ' meeting agenda.<br></br>Thank you,</p></div>')
     console.log('Final');
     };
     if ($('#distro')[0].checked) {
         $('#textZone').append('<div  class="y-2 calendar col-12"><h2><a href="mailto:npumail@atlantaga.gov?subject=NPU -' + title + ' Monthly Meeting Notification&subject=NPU – ' + title + ' Monthly Meeting Notification &body=Greetings!%0D%0A%0D%0AYou are receiving this e-mail because you opted in for monthly meeting notices for NPU-' + title + '.%0D%0A%0D%0AAgendas for monthly NPU meetings are posted on our website: https://www.atlantaga.gov/government/departments/city-planning/neighborhood-and-npu-contacts%0D%0A%0D%0ADATE: ' + date + '%0DTIME: ' + meeting.time + '%0DLOCATION: Virtual%0D%0A%0D%0ATo register in advance, go to:%0D' + meeting.zURL + '%0D' + meeting.meet + '%0D%0A%0D%0ACity of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!%0D%0A%0D%0AIf you desire additional information regarding NPU-' + title + ', please contact the following person(s):%0D%0A%0D%0ANPU Chair: ' + meeting.chair+ ' (' + meeting.chairE + ')%0DNPU Planner: ' + meeting.planner + ' (' + meeting.plannerE + ')%0D%0A%0D%0AThank you,">DISTRO LIST</a></h2>'
-            + '<p id="distro" onclick="copy(this)"><strong>NPU – ' + title + ' Monthly Meeting Notification </strong><br>Greetings!<br></br>You are receiving this e-mail because you opted in for monthly meeting notices for NPU-<strong>' + title + '</strong>.<br></br>Agendas for monthly NPU meetings are posted on our website:<a href="https://www.atlantaga.gov/government/departments/city-planning/neighborhood-and-npu-contacts">Directory and NPU Meeting Agendas | Atlanta, GA (AtlantaGA.gov)</a><br></br>DATE: ' + date + '<br>TIME: ' + meeting.time + '<br>LOCATION: Virtual<br>Register in advance by clicking <a href="' + meeting.zURL + '">HERE</a><br>' + meeting.meet + '<br></br>City of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!<br></br>If you desire additional information regarding NPU-' + title + ', please contact the following person(s):<br></br>NPU Chair: ' + meeting.chair+ ' (<a href="mailto:' + (meeting.chairE) + '">' + meeting.chairE + '</a>)<br>NPU Planner: ' + meeting.planner + ' (<a href="mailto:' + (meeting.plannerE) + '">' + meeting.plannerE + '</a>)<br></br>Thank you,</p></div>')
+            + '<p id="distro" onclick="copy(this)"><strong>NPU – ' + title + ' Monthly Meeting Notification </strong><br>Greetings!<br></br>You are receiving this e-mail because you opted in for monthly meeting notices for NPU-<strong>' + title + '</strong>.<br></br>Agendas for monthly NPU meetings are posted on our website: <a href="https://www.atlantaga.gov/government/departments/city-planning/neighborhood-and-npu-contacts">Directory and NPU Meeting Agendas | Atlanta, GA (AtlantaGA.gov)</a><br></br>DATE: ' + date + '<br>TIME: ' + meeting.time + '<br>LOCATION: Virtual<br>Register in advance by clicking <a href="' + meeting.zURL + '">HERE</a><br><pre>' + meeting.meet + '</pre><br>City of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!<br></br>If you desire additional information regarding NPU-' + title + ', please contact the following person(s):<br></br>NPU Chair: ' + meeting.chair+ ' (<a href="mailto:' + (meeting.chairE) + '">' + meeting.chairE + '</a>)<br>NPU Planner: ' + meeting.planner + ' (<a href="mailto:' + (meeting.plannerE) + '">' + meeting.plannerE + '</a>)<br></br>Thank you,</p></div>')
     console.log('Distro');
      };
     if ($('#access')[0].checked) {
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2>VIRTUAL MEETING ACCESS INFO</h2><p id="access" onclick="copy(this)"><strong>NPU-' + title + ' ' + month + ' Virtual meeting access info </strong><br></br>Hello,<br></br>The NPU-' + title + ' ' + month + ' meeting will be held remotely.<br></br><strong>NPU-' + title + ' | ' + casual + ' ' + meeting.time + '</strong><br></br>Register in advance by clicking <a href="' + meeting.zURL + '">HERE</a><br>' + meeting.meet + '<br></br>Please continue to work with NPU-' + title + ' Chair ' + meeting.chair + ' (<a href="mailto:' + (meeting.chairE) + '">' + meeting.chairE + '</a>) to confirm details of your presentation.<br></br>Thank you,</p></div>')
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2>VIRTUAL MEETING ACCESS INFO</h2><p id="access" onclick="copy(this)"><strong>NPU-' + title + ' ' + month + ' Virtual meeting access info </strong><br>Hello,<br></br>The NPU-' + title + ' ' + month + ' meeting will be held remotely.<br></br><strong>NPU-' + title + ' | ' + casual + ' ' + meeting.time + '</strong><br></br>Register in advance by clicking <a href="' + meeting.zURL + '">HERE</a><br><pre>' + meeting.meet + '</pre>Please continue to work with NPU-' + title + ' Chair ' + meeting.chair + ' (<a href="mailto:' + (meeting.chairE) + '">' + meeting.chairE + '</a>) to confirm details of your presentation.<br></br>Thank you,</p></div>')
     console.log('Access');
     }
     if ($('#approved')[0].checked) {
@@ -413,7 +411,7 @@ Workforce Innovation Hub Room
     console.log('Approved');
     }
     if ($('#nextdoor')[0].checked) {
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2>NEXTDOOR</h2><p id="nextdoor" onclick="copy(this)"><strong>NPU-' + title + ' | ' + casual + ' ' + meeting.time + '</strong><br></br>Hey Neighbors!<br></br>The summer is upon us and Atlanta is growing as fast as the Kudzu. Attend your NPU meetings to hear what’s happening in your neighborhood, and have your say on the projects and events that affect you!<br></br>NPU-' + title + ' meets next ' + casual + ' at ' + meeting.time + '<br></br>To register in advance go to:<br>' + meeting.zURL + '<br>' + meeting.meet + '<br></br>Thank you,</p></div>')
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2>NEXTDOOR</h2><p id="nextdoor" onclick="copy(this)"><strong>NPU-' + title + ' | ' + casual + ' ' + meeting.time + '</strong><br></br>Hey Neighbors!<br></br>The summer is upon us and Atlanta is growing as fast as the Kudzu. Attend your NPU meetings to hear what’s happening in your neighborhood, and have your say on the projects and events that affect you!<br></br>NPU-' + title + ' meets next ' + casual + ' at ' + meeting.time + '<br></br>To register in advance go to:<br>' + meeting.zURL + '<br><pre>' + meeting.meet + '</pre>Thank you,</p></div>')
     console.log('Nextdoor');
     }
 });
@@ -433,24 +431,25 @@ $(document).ready(function () {
     finDate = $('input[type="date"]').val(new moment().add(7, 'days').toISOString(true).substring(0, 10));
 });
 
-function copy(that){
-    var inp = document.createElement('input');
-    document.body.appendChild(inp)
-    inp.value = that.textContent;
-    inp.select();
-    // document.execCommand('copy', false);
-    navigator.clipboard.writeText(inp.value).then(function() {
-        console.log('Copying to clipboard was successful!');
-        // flash text on copy
-        $(that).css('color', '#fff');
-        setTimeout(function(){
-            $(that).css('color', '#000');
-        }, 100);
-    }, function(err) {
-      console.error('Could not copy text: ', err);
-    });
-    inp.remove();
-}
+// <pre> text hobbles copy function :(
+// function copy(that){
+//     var inp = document.createElement('input');
+//     document.body.appendChild(inp)
+//     inp.value = that.textContent;
+//     inp.select();
+//     // document.execCommand('copy', false);
+//     navigator.clipboard.writeText(inp.value).then(function() {
+//         console.log('Copying to clipboard was successful!');
+//         // flash text on copy
+//         $(that).css('color', '#fff');
+//         setTimeout(function(){
+//             $(that).css('color', '#000');
+//         }, 100);
+//     }, function(err) {
+//       console.error('Could not copy text: ', err);
+//     });
+//     inp.remove();
+// }
 
 // Save button classNames to local storage
 $('.pngl').click(function () {
