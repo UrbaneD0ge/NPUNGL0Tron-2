@@ -56,9 +56,10 @@ $('#submit').on('click', function OnClickEvent (event) {
     function getMeeting(meetDetailProto) {
         switch (meetDetailProto) {
             case 'A':
-                meet = `Meeting ID: 856 7471 3054
-                Dial In: +1 646 558 8656
-                Access Code: 856 7471 3054#`
+                meet = `Meeting ID: 856 7471 3054`
+                dialIn = `Dial In: +1 646 558 8656`
+                aCode = `Access Code: 856 7471 3054#`
+                hyb = false;
                 zURL = `https://atlantaga-gov.zoom.us/meeting/register/tZErcO2vrzgqH9ArhFC4ZPNWdLs4yiiBa749`
                 time = `7:00PM`
                 chair = `Brinkley Dickerson`
@@ -461,4 +462,64 @@ function copy(that){
       console.error('Could not copy text: ', err);
     });
     inp.remove();
-  }
+}
+
+// Save button classNames to local storage
+$('.pngl').click(function () {
+    localStorage.setItem('A', $('#A')[0].className);
+    localStorage.setItem('B', $('#B')[0].className);
+    localStorage.setItem('C', $('#C')[0].className);
+    localStorage.setItem('D', $('#D')[0].className);
+    localStorage.setItem('E', $('#E')[0].className);
+    localStorage.setItem('F', $('#F')[0].className);
+    localStorage.setItem('G', $('#G')[0].className);
+    localStorage.setItem('H', $('#H')[0].className);
+    localStorage.setItem('I', $('#I')[0].className);
+    localStorage.setItem('J', $('#J')[0].className);
+    localStorage.setItem('K', $('#K')[0].className);
+    localStorage.setItem('L', $('#L')[0].className);
+    localStorage.setItem('M', $('#M')[0].className);
+    localStorage.setItem('N', $('#N')[0].className);
+    localStorage.setItem('O', $('#O')[0].className);
+    localStorage.setItem('P', $('#P')[0].className);
+    localStorage.setItem('Q', $('#Q')[0].className);
+    localStorage.setItem('R', $('#R')[0].className);
+    localStorage.setItem('S', $('#S')[0].className);
+    localStorage.setItem('T', $('#T')[0].className);
+    localStorage.setItem('V', $('#V')[0].className);
+    localStorage.setItem('W', $('#W')[0].className);
+    localStorage.setItem('X', $('#X')[0].className);
+    localStorage.setItem('Y', $('#Y')[0].className);
+    localStorage.setItem('Z', $('#Z')[0].className);
+}
+);
+
+//on reload, load saved classNames
+$(document).ready(function () {
+    localStorage.getItem('A') ? $('#A')[0].className = localStorage.getItem('A') : null;
+    localStorage.getItem('B') ? $('#B')[0].className = localStorage.getItem('B') : null;
+    localStorage.getItem('C') ? $('#C')[0].className = localStorage.getItem('C') : null;
+    localStorage.getItem('D') ? $('#D')[0].className = localStorage.getItem('D') : null;
+    localStorage.getItem('E') ? $('#E')[0].className = localStorage.getItem('E') : null;
+    localStorage.getItem('F') ? $('#F')[0].className = localStorage.getItem('F') : null;
+    localStorage.getItem('G') ? $('#G')[0].className = localStorage.getItem('G') : null;
+    localStorage.getItem('H') ? $('#H')[0].className = localStorage.getItem('H') : null;
+    localStorage.getItem('I') ? $('#I')[0].className = localStorage.getItem('I') : null;
+    localStorage.getItem('J') ? $('#J')[0].className = localStorage.getItem('J') : null;
+    localStorage.getItem('K') ? $('#K')[0].className = localStorage.getItem('K') : null;
+    localStorage.getItem('L') ? $('#L')[0].className = localStorage.getItem('L') : null;
+    localStorage.getItem('M') ? $('#M')[0].className = localStorage.getItem('M') : null;
+    localStorage.getItem('N') ? $('#N')[0].className = localStorage.getItem('N') : null;
+    localStorage.getItem('O') ? $('#O')[0].className = localStorage.getItem('O') : null;
+    localStorage.getItem('P') ? $('#P')[0].className = localStorage.getItem('P') : null;
+    localStorage.getItem('Q') ? $('#Q')[0].className = localStorage.getItem('Q') : null;
+    localStorage.getItem('R') ? $('#R')[0].className = localStorage.getItem('R') : null;
+    localStorage.getItem('S') ? $('#S')[0].className = localStorage.getItem('S') : null;
+    localStorage.getItem('T') ? $('#T')[0].className = localStorage.getItem('T') : null;
+    localStorage.getItem('V') ? $('#V')[0].className = localStorage.getItem('V') : null;
+    localStorage.getItem('W') ? $('#W')[0].className = localStorage.getItem('W') : null;
+    localStorage.getItem('X') ? $('#X')[0].className = localStorage.getItem('X') : null;
+    localStorage.getItem('Y') ? $('#Y')[0].className = localStorage.getItem('Y') : null;
+    localStorage.getItem('Z') ? $('#Z')[0].className = localStorage.getItem('Z') : null;
+}
+);
