@@ -11,17 +11,6 @@ function chgColor () {
   this.className = color;
 };
 
-// Save button states to local storage
-// function savePngl() {
-//   var progress = $('.btn').className.toString();
-//   var pnglID = $('.btn').attr('id');
-//   localStorage.setItem(key: progress, value: pnglID);
-// }
-
-// $('.btn').on('click', savePngl);
-// function getMeeting(title) {
-// };
-
 function getPubl(selectedDate) {
     let publ = new moment(selectedDate);
     let days = 6;   // number of days to subtract
