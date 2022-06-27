@@ -411,7 +411,7 @@ Access Code: 947 9575 5692#`
     console.log('Approved');
     }
     if ($('#nextdoor')[0].checked) {
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2>NEXTDOOR</h2><p id="nextdoor" onclick="copy(this)"><strong>NPU-' + title + ' | ' + casual + ' ' + meeting.time + '</strong><br></br>Hey Neighbors!<br></br>The summer is upon us and Atlanta is growing as fast as the Kudzu. Attend your NPU meetings to hear what’s happening in your neighborhood, and have your say on the projects and events that affect you!<br></br>NPU-' + title + ' meets next ' + casual + ' at ' + meeting.time + '<br></br>To register in advance go to:<br>' + meeting.zURL + '<br><pre>' + meeting.meet + '</pre>Thank you,</p></div>')
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2>NEXTDOOR</h2><p id="nextdoor" onclick="copy(this)"><strong>NPU-' + title + ' | ' + casual + ' ' + meeting.time + '</strong><br></br>Hey Neighbors!<br></br>Theres so much going on in Atlanta during the Summer, it’s easy to have a squirrel moment! But taking one night each month to attend your NPU meetings can keep you on top of what’s going on in your neighborhood and keep you in the loop about important updates to city services.<br></br>NPU-' + title + ' meets next ' + casual + ' at ' + meeting.time + '<br></br>To register in advance go to:<br>' + meeting.zURL + '<br><pre>' + meeting.meet + '</pre>Thank you,</p></div>')
     console.log('Nextdoor');
     }
 });
