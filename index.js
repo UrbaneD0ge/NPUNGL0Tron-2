@@ -2,7 +2,7 @@ document.querySelectorAll('.pngl').forEach(item => {
   item.addEventListener('click', chgColor)
 });
 
-var colors = ['btn btn-block btn-warning', 'btn btn-block btn-success', 'btn btn-block btn-dark', 'btn btn-block btn-secondary']
+var colors = ['btn btn-block btn-outline-warning', 'btn btn-block btn-outline-success', 'btn btn-block btn-warning', 'btn btn-block btn-success', 'btn btn-block btn-dark', 'btn btn-block btn-secondary']
 
 function chgColor () {
   this.colors = this.colors || [...colors];
