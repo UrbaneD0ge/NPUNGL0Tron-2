@@ -36,10 +36,6 @@ $('#submit').on('click', function OnClickEvent (event) {
     year = dateControl.format("YYYY");
     casual = dateControl.format("dddd, MMMM Do");
     short = dateControl.format("MMMM Do");
-    // publ = date minus 5 business days
-    // publ = moment(dateControl).subtract(5, 'weekdays').format("dddd, MMMM Do");
-
-
 
     // use getMeeting function to get meeting info
     function getMeeting(meetDetailProto) {
@@ -431,7 +427,7 @@ $(document).ready(function () {
     finDate = $('input[type="date"]').val(new moment().add(7, 'days').toISOString(true).substring(0, 10));
 });
 
-// <pre> text hobbles copy function :(
+// // <pre> text hobbles copy function :(
 // function copy(that){
 //     var inp = document.createElement('input');
 //     document.body.appendChild(inp)
