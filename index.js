@@ -39,8 +39,6 @@ $('#submit').on('click', function OnClickEvent (event) {
     // publ = date minus 5 business days
     // publ = moment(dateControl).subtract(5, 'weekdays').format("dddd, MMMM Do");
 
-
-
     // use getMeeting function to get meeting info
     function getMeeting(meetDetailProto) {
         switch (meetDetailProto) {
