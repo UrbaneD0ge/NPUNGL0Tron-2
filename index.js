@@ -1,14 +1,14 @@
 document.querySelectorAll('.pngl').forEach(item => {
-  item.addEventListener('click', chgColor)
+    item.addEventListener('click', chgColor)
 });
 
 var colors = ['btn btn-block btn-outline-warning', 'btn btn-block btn-outline-success', 'btn btn-block btn-warning', 'btn btn-block btn-success', 'btn btn-block btn-dark', 'btn btn-block btn-secondary']
 
-function chgColor () {
-  this.colors = this.colors || [...colors];
-  let color = this.colors.shift();
-  this.colors.push(color);
-  this.className = color;
+function chgColor() {
+    this.colors = this.colors || [...colors];
+    let color = this.colors.shift();
+    this.colors.push(color);
+    this.className = color;
 };
 
 function getPubl(selectedDate) {
@@ -24,7 +24,7 @@ function getPubl(selectedDate) {
     return publ.format("dddd, MMMM Do");
 };
 
-$('#submit').on('click', function OnClickEvent (event) {
+$('#submit').on('click', function OnClickEvent(event) {
     // set input values to variables
     let title = $('#NPU').val();
 
@@ -373,7 +373,7 @@ Access Code: 947 9575 5692#`
             //     console.log(`Please select one of the 25 NPUs A-Z or APAB.`)
             //     break;
         }
-    return { meet: meet, chair: chair, planner: planner, time: time, chairE: chairE, plannerE: plannerE, zURL: zURL, chairHon: chairHon };
+        return { meet: meet, chair: chair, planner: planner, time: time, chairE: chairE, plannerE: plannerE, zURL: zURL, chairHon: chairHon };
     };
 
     console.log(title);
@@ -384,31 +384,31 @@ Access Code: 947 9575 5692#`
         let publ = getPubl(dateControl);
         console.log(publ);
         console.log('Draft');
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:NPU-' + title + '?subject=NPU-' + title + ' ' + month + ' draft meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov&body=Good day ' + meeting.chairHon + ' and NPU-' + title + ',%0D%0DPlease see the attached draft version of the NPU-' + title + ' ' + month + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know by EOB ' + publ +'.%0D%0DThank you,">DRAFT</a></h2>'
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:NPU-' + title + '?subject=NPU-' + title + ' ' + month + ' draft meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov&body=Good day ' + meeting.chairHon + ' and NPU-' + title + ',%0D%0DPlease see the attached draft version of the NPU-' + title + ' ' + month + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know by EOB ' + publ + '.%0D%0DThank you,">DRAFT</a></h2>'
             + '<p id="draft" onclick="copy(this)"><strong>NPU-' + title + ' ' + month + ' draft meeting agenda</strong><br>Good day ' + meeting.chairHon + ' and NPU-' + title + ',<br><br>Please see the attached draft version of the NPU-' + title + ' ' + month + ' meeting agenda. If you notice any items missing, miscategorized, or would like to make other edits please let me know <u>by EOB ' + publ + '</u>.<br><br>Thank you,</p></div>');
     };
     if ($('#final')[0].checked) {
         $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:NPU-' + title + '?subject=' + month + ' Final meeting agenda&cc=dvasquez@atlantaga.gov; kdunlap@atlantaga.gov; snjenkins@atlantaga.gov&body=Good day ' + meeting.chairHon + ' and NPU-' + title + ',%0D%0DPlease see the attached Final version of the NPU-' + title + ' ' + month + ' meeting agenda.%0D%0DThank you,">FINAL</a></h2>'
             + '<p onclick="copy(this)"><strong>' + month + ' Final meeting agenda</strong><br>Good day ' + meeting.chairHon + ' and NPU-' + title + ',<br><br>Please see the attached Final version of the NPU-' + title + ' ' + month + ' meeting agenda.<br><br>Thank you,</p></div>')
-    console.log('Final');
+        console.log('Final');
     };
     if ($('#distro')[0].checked) {
-        $('#textZone').append('<div  class="y-2 calendar col-12"><h2><a href="mailto:npumail@atlantaga.gov?subject=NPU -' + title + ' Monthly Meeting Notification&subject=NPU – ' + title + ' Monthly Meeting Notification &body=Greetings!%0D%0A%0D%0AYou are receiving this e-mail because you opted in for monthly meeting notices for NPU-' + title + '.%0D%0A%0D%0AAgendas for monthly NPU meetings are posted on our website: https://www.atlantaga.gov/government/departments/city-planning/neighborhood-and-npu-contacts%0D%0A%0D%0ADATE: ' + date + '%0DTIME: ' + meeting.time + '%0DLOCATION: Virtual%0D%0A%0D%0ATo register in advance, go to:%0D' + meeting.zURL + '%0D' + meeting.meet + '%0D%0A%0D%0ACity of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!%0D%0A%0D%0AIf you desire additional information regarding NPU-' + title + ', please contact the following person(s):%0D%0A%0D%0ANPU Chair: ' + meeting.chair+ ' (' + meeting.chairE + ')%0DNPU Planner: ' + meeting.planner + ' (' + meeting.plannerE + ')%0D%0A%0D%0AThank you,">DISTRO LIST</a></h2>'
-            + '<p id="distro" onclick="copy(this)"><strong>NPU – ' + title + ' Monthly Meeting Notification </strong><br>Greetings!<br><br>You are receiving this e-mail because you opted in for monthly meeting notices for NPU-<strong>' + title + '</strong>.<br><br>Agendas for monthly NPU meetings are posted on our website: <a href="https://www.atlantaga.gov/government/departments/city-planning/neighborhood-and-npu-contacts">Directory and NPU Meeting Agendas | Atlanta, GA (AtlantaGA.gov)</a><br><br>DATE: ' + date + '<br>TIME: ' + meeting.time + '<br>LOCATION: Virtual<br>Register in advance by clicking <a href="' + meeting.zURL + '">HERE</a><br><pre>' + meeting.meet + '</pre><br>City of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!<br><br>If you desire additional information regarding NPU-' + title + ', please contact the following person(s):<br><br>NPU Chair: ' + meeting.chair+ ' (<a href="mailto:' + (meeting.chairE) + '">' + meeting.chairE + '</a>)<br>NPU Planner: ' + meeting.planner + ' (<a href="mailto:' + (meeting.plannerE) + '">' + meeting.plannerE + '</a>)<br><br>Thank you,</p></div>')
-    console.log('Distro');
-     };
+        $('#textZone').append('<div  class="y-2 calendar col-12"><h2><a href="mailto:npumail@atlantaga.gov?subject=NPU -' + title + ' Monthly Meeting Notification&subject=NPU – ' + title + ' Monthly Meeting Notification &body=Greetings!%0D%0A%0D%0AYou are receiving this e-mail because you opted in for monthly meeting notices for NPU-' + title + '.%0D%0A%0D%0AAgendas for monthly NPU meetings are posted on our website: https://www.atlantaga.gov/government/departments/city-planning/neighborhood-and-npu-contacts%0D%0A%0D%0ADATE: ' + date + '%0DTIME: ' + meeting.time + '%0DLOCATION: Virtual%0D%0A%0D%0ATo register in advance, go to:%0D' + meeting.zURL + '%0D' + meeting.meet + '%0D%0A%0D%0ACity of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!%0D%0A%0D%0AIf you desire additional information regarding NPU-' + title + ', please contact the following person(s):%0D%0A%0D%0ANPU Chair: ' + meeting.chair + ' (' + meeting.chairE + ')%0DNPU Planner: ' + meeting.planner + ' (' + meeting.plannerE + ')%0D%0A%0D%0AThank you,">DISTRO LIST</a></h2>'
+            + '<p id="distro" onclick="copy(this)"><strong>NPU – ' + title + ' Monthly Meeting Notification </strong><br>Greetings!<br><br>You are receiving this e-mail because you opted in for monthly meeting notices for NPU-<strong>' + title + '</strong>.<br><br>Agendas for monthly NPU meetings are posted on our website: <a href="https://www.atlantaga.gov/government/departments/city-planning/neighborhood-and-npu-contacts">Directory and NPU Meeting Agendas | Atlanta, GA (AtlantaGA.gov)</a><br><br>DATE: ' + date + '<br>TIME: ' + meeting.time + '<br>LOCATION: Virtual<br>Register in advance by clicking <a href="' + meeting.zURL + '">HERE</a><br><pre>' + meeting.meet + '</pre><br>City of Atlanta residents are encouraged to attend their local Neighborhood Planning Unit (NPU) meetings to review proposed development, applications for alcohol licenses and special events, as well as amendments to the City’s Zoning Ordinance and Comprehensive Development Plan. Thanks again for your commitment to being actively involved in the City of Atlanta’s future!<br><br>If you desire additional information regarding NPU-' + title + ', please contact the following person(s):<br><br>NPU Chair: ' + meeting.chair + ' (<a href="mailto:' + (meeting.chairE) + '">' + meeting.chairE + '</a>)<br>NPU Planner: ' + meeting.planner + ' (<a href="mailto:' + (meeting.plannerE) + '">' + meeting.plannerE + '</a>)<br><br>Thank you,</p></div>')
+        console.log('Distro');
+    };
     if ($('#access')[0].checked) {
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2>VIRTUAL MEETING ACCESS INFO</h2><p id="access" onclick="copy(this)"><strong>NPU-' + title + ' ' + month + ' Virtual meeting access info </strong><br>Hello,<br><br>The NPU-' + title + ' ' + month + ' meeting will be held remotely.<br><br><strong>NPU-' + title + ' | ' + casual + ' ' + meeting.time + '</strong><br><br>Register in advance by clicking <a href="' + meeting.zURL + '">HERE</a><br><pre>' + meeting.meet + '</pre>Please continue to work with NPU-' + title + ' Chair ' + meeting.chair + ' (<a href="mailto:' + (meeting.chairE) + '">' + meeting.chairE + '</a>) to confirm details of your presentation.<br><br>Thank you,</p></div>')
-    console.log('Access');
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2>VIRTUAL MEETING ACCESS INFO</h2><p id="access" onclick="copy(this)"><strong>NPU-' + title + ' ' + month + ' Virtual meeting access info </strong><br>Hello,<br><br>The NPU-' + title + ' ' + month + ' meeting will be held remotely.<br><br><strong>NPU-' + title + ' | ' + casual + ' ' + meeting.time + '</strong><br><br>Register in advance by clicking <a href="' + meeting.zURL + '">HERE</a><br><pre>' + meeting.meet + '<br><br></pre>Please continue to work with NPU-' + title + ' Chair ' + meeting.chair + ' (<a href="mailto:' + (meeting.chairE) + '">' + meeting.chairE + '</a>) to confirm details of your presentation.<br><br>Thank you,</p></div>')
+        console.log('Access');
     }
     if ($('#approved')[0].checked) {
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:?subject=APPROVED NPU-' + title + ' ' + month + ' presentation&cc=kdunlap@atlantaga.gov; dvasquez@atlantaga.gov&body=Hello,%0D%0A%0D%0AYour request to present at the NPU-' + title + ' ' + short + ' has been approved.%0D%0A%0D%0APlease reach out to NPU-' + title + ' Chair ' + meeting.chair + ' (' + meeting.chairE + ') to iron out the details of the presentation.%0D%0A%0D%0AThank you,%0D%0A%0D%0A">PRESENTATION APPROVED</a></h2>'
-            + '<p id="approved" onclick="copy(this)"><strong>[APPROVED] NPU-' + title + ' ' + month + ' presentation</strong><br><br>Hello,<br><br>Your request to present at the NPU-' + title + ' ' + short + ' meeting has been approved.<br><br>Please reach out to NPU-' + title + ' Chair ' + meeting.chair + ' (<a href="mailto:' + (meeting.chairE) + '">' + meeting.chairE + '</a>) to iron out the details of the presentation.<br><br>Thank you,</p></div>')
-    console.log('Approved');
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:?subject=APPROVED NPU-' + title + ' ' + month + ' presentation&cc=kdunlap@atlantaga.gov; dvasquez@atlantaga.gov&body=Hello,%0D%0DYour request to present at the NPU-' + title + ' ' + short + ' has been approved.%0D%0A%0D%0APlease reach out to NPU-' + title + ' Chair ' + meeting.chair + ' (mailto:' + meeting.chairE + ') to iron out the details of the presentation.%0D%0A%0D%0AThank you,%0D%0A%0D%0A">PRESENTATION APPROVED</a></h2>'
+            + '<p id="approved" onclick="copy(this)"><strong>[APPROVED] NPU-' + title + ' ' + month + ' presentation </strong><br>Hello,<br><br>Your request to present at the NPU-' + title + ' ' + short + ' meeting has been approved.<br><br>Please reach out to NPU-' + title + ' Chair ' + meeting.chair + ' (<a href="mailto:' + (meeting.chairE) + '">' + meeting.chairE + '</a>) to iron out the details of the presentation.<br><br>Thank you,</p></div>')
+        console.log('Approved');
     }
     if ($('#nextdoor')[0].checked) {
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2>NEXTDOOR</h2><p id="nextdoor" onclick="copy(this)"><strong>NPU-' + title + ' | ' + casual + ' ' + meeting.time + '</strong><br><br>Hey Neighbors!<br><br>There’s so much going on in Atlanta during the Summer, it’s easy to have a squirrel moment!🐿  But taking one night each month to attend your NPU meetings can keep you on top of what’s going on in your neighborhood and in the loop about important updates to city services.<br><br>NPU-' + title + ' meets next ' + casual + ' at ' + meeting.time + '<br><br>To register in advance go to:<br>' + meeting.zURL + '<pre>' + meeting.meet + '<br></pre>Thank you,</p></div>')
-    console.log('Nextdoor');
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2>NEXTDOOR</h2><p id="nextdoor" onclick="copy(this)"><strong>NPU-' + title + ' | ' + casual + ' ' + meeting.time + '</strong><br>Hey Neighbors!<br><br>There’s so much going on in Atlanta during the Summer, it’s easy to have a squirrel moment!🐿  But taking one night each month to attend your NPU meetings can keep you on top of what’s going on in your neighborhood and in the loop about important updates to city services.<br><br>NPU-' + title + ' meets next ' + casual + ' at ' + meeting.time + '<br><br>To register in advance go to:<br>' + meeting.zURL + '<pre>' + meeting.meet + '<br><br></pre>Thank you,</p></div>')
+        console.log('Nextdoor');
     }
 });
 
