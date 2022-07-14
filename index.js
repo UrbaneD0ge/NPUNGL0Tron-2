@@ -402,7 +402,7 @@ Access Code: 947 9575 5692#`
         console.log('Access');
     }
     if ($('#approved')[0].checked) {
-        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:?subject=APPROVED NPU-' + title + ' ' + month + ' presentation&cc=kdunlap@atlantaga.gov; dvasquez@atlantaga.gov&body=Hello,%0D%0DYour request to present at the NPU-' + title + ' ' + short + ' has been approved.%0D%0A%0D%0APlease reach out to NPU-' + title + ' Chair ' + meeting.chair + ' (mailto:' + meeting.chairE + ') to iron out the details of the presentation.%0D%0A%0D%0AThank you,%0D%0A%0D%0A">PRESENTATION APPROVED</a></h2>'
+        $('#textZone').append('<div class="y-2 calendar col-12"><h2><a href="mailto:?subject=APPROVED NPU-' + title + ' ' + month + ' presentation&cc=kdunlap@atlantaga.gov; dvasquez@atlantaga.gov&body=Hello,%0D%0DYour request to present at the NPU-' + title + ' ' + short + ' meeting has been approved.%0D%0A%0D%0APlease reach out to NPU-' + title + ' Chair ' + meeting.chair + ' (mailto:' + meeting.chairE + ') to iron out the details of the presentation.%0D%0A%0D%0AThank you,%0D%0A%0D%0A">PRESENTATION APPROVED</a></h2>'
             + '<p id="approved" onclick="copy(this)"><strong>[APPROVED] NPU-' + title + ' ' + month + ' presentation </strong><br>Hello,<br><br>Your request to present at the NPU-' + title + ' ' + short + ' meeting has been approved.<br><br>Please reach out to NPU-' + title + ' Chair ' + meeting.chair + ' (<a href="mailto:' + (meeting.chairE) + '">' + meeting.chairE + '</a>) to iron out the details of the presentation.<br><br>Thank you,</p></div>')
         console.log('Approved');
     }
