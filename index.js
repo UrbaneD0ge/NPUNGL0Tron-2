@@ -80,7 +80,7 @@ Access Code: 934 4511 6340#`
                 meet = `Meeting ID: 953 5469 3520
 Dial In: +1 646-558-8656
 Access Code: 953 5469 3520#`
-                zURL = `https://us06web.zoom.us/meeting/register/tJEucu2upzgvGNRkuGmiYcE2akuYMkFc1av`
+                zURL = `https://us06web.zoom.us/meeting/register/tJEucu2upzgvGNRkuGmiYcE2akuYMkFc1av-`
                 time = `7:30PM`
                 chair = `Jim Martin`
                 chairHon = `Mr. Martin`
