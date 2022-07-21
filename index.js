@@ -262,9 +262,14 @@ Access Code: 886 2169 6544#`
                 plannerE = `mmcneal@atlantaga.gov`
                 break;
             case 'S':
-                meet = `Meeting ID: 993 2987 4388
+                meet = `Online:
+Meeting ID: 993 2987 4388
 Dial In: +1 646 558 8656
-Access Code: 993 2987 4388#`
+Access Code: 993 2987 4388#
+
+And in person:
+Vicars Community Center
+838 Cascade Rd SW, 30311`
                 zURL = `https://us06web.zoom.us/meeting/register/tJ0udeCgqT8pEtycXQZ9s7Tk4_0J_73DZmQD`
                 time = `7:00PM`
                 chair = `Nick Hess`
